@@ -28,18 +28,19 @@ function Right(){
     })
 }
 
-
-const Bar = () => Widget.Window({
-    name: 'bar',
-    class_name: 'bar',
-    anchor: ['bottom', 'left', 'right'],
-    exclusivity: "exclusive",
-    child: Widget.CenterBox({
-        start_widget: Left(),
-        center_widget: Center(),
-        end_widget: RightClickMenu(),
-    }),
-})
+const Bar = () => {
+    return Widget.Window({
+        anchor: ['bottom', 'left', 'right'],
+        child: Widget.CenterBox({
+            start_widget: Left(),
+            center_widget: Center(),
+            end_widget: RightClickMenu(),
+        }),
+        class_name: 'bar',
+        exclusivity: "exclusive",
+        name: 'bar',
+    });
+}
 
 
 App.config({
