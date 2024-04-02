@@ -10,6 +10,7 @@ function TestBar(){
         anchor: ["top", "right", "left"],//LayoutManager.GetAnchor()
         exclusivity: "exclusive",
         child: Widget.Button({
+            label: "Create addon",
             onClicked: SpawnTestAddon
         })
     })
