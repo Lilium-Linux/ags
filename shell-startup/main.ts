@@ -1,17 +1,12 @@
 //import { LayoutManager } from "layout-manager/LayoutManager"
 
-function SpawnTestAddon() {
-    if(!App.getWindow("addon-window"))
-        App.addWindow(TestAddonWindow());
-}
-
 function TestBar(){
     return Widget.Window({
         anchor: ["top", "right", "left"],//LayoutManager.GetAnchor()
         exclusivity: "exclusive",
         child: Widget.Button({
-            label: "Create addon",
-            onClicked: SpawnTestAddon
+            label: "Toggle addon",
+            onClicked: () => App.toggleWindow("addon-window")
         })
     })
 }
@@ -21,9 +16,8 @@ function TestAddonWindow() {
         name: "addon-window",
         anchor: ["top", "right", "left"],//LayoutManager.GetAnchor()
         exclusivity: "exclusive",
-        child: Widget.Button({
-            label: "Close",
-            onClicked: () => App.closeWindow("addon-window")
+        child: Widget.Label({
+            label: "Addon"
         })
     })
 }
