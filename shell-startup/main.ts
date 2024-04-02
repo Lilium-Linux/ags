@@ -1,10 +1,8 @@
 //import { LayoutManager } from "layout-manager/LayoutManager"
 
-import app from "../types/app";
-
 function SpawnTestAddon() {
-    //if(app.getWindow("addon-window"))
-        //App.addWindow(TestAddonWindow());
+    if(App.getWindow("addon-window"))
+        App.addWindow(TestAddonWindow());
 }
 
 function TestBar(){
