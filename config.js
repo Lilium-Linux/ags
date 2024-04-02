@@ -1,3 +1,3 @@
-import { Start } from "/shell-startup/startup";
+import { Start } from "shell-startup/startup.js";
 
 await Start();
