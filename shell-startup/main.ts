@@ -3,8 +3,8 @@
 import app from "../types/app";
 
 function SpawnTestAddon() {
-    if(app.getWindow("addon-window"))
-        App.addWindow(TestAddonWindow());
+    //if(app.getWindow("addon-window"))
+        //App.addWindow(TestAddonWindow());
 }
 
 function TestBar(){
