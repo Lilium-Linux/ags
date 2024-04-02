@@ -20,5 +20,5 @@ function TestAddonWindow() {
 }
 
 App.config({
-    windows: [TestBar()]
+    windows: [TestBar(), TestAddonWindow()]
 })
