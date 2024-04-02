@@ -1,7 +1,7 @@
 //import { LayoutManager } from "layout-manager/LayoutManager"
 
 function SpawnTestAddon() {
-
+    App.addWindow(TestAddonWindow());
 }
 
 function TestBar(){
@@ -27,5 +27,5 @@ function TestAddonWindow() {
 }
 
 App.config({
-    windows: [TestBar(), TestAddonWindow()]
+    windows: [TestBar()]
 })
