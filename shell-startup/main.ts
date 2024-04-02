@@ -9,6 +9,16 @@ function TestBar(){
     })
 }
 
+function TestAddonWindow() {
+    return Widget.Window({
+        anchor: ["top", "right", "left"],//LayoutManager.GetAnchor()
+        exclusivity: "exclusive",
+        child: Widget.Label({
+            label: "Hello! im Addon Window!"
+        }),
+    })
+}
+
 App.config({
     windows: [TestBar()]
 })
