@@ -1,21 +1,28 @@
 //import { LayoutManager } from "layout-manager/LayoutManager"
 
+function SpawnTestAddon() {
+
+}
 
 function TestBar(){
     return Widget.Window({
         anchor: ["top", "right", "left"],//LayoutManager.GetAnchor()
         exclusivity: "exclusive",
-        child: Widget.Slider(),
+        child: Widget.Button({
+            onClicked: SpawnTestAddon
+        })
     })
 }
 
 function TestAddonWindow() {
     return Widget.Window({
+        name: "addon-window",
         anchor: ["top", "right", "left"],//LayoutManager.GetAnchor()
         exclusivity: "exclusive",
-        child: Widget.Label({
-            label: "Hello! im Addon Window!"
-        }),
+        child: Widget.Button({
+            label: "Close",
+            onClicked: () => App.closeWindow("addon-window")
+        })
     })
 }
 
