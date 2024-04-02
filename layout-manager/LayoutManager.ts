@@ -4,10 +4,10 @@ interface AnchorData {
     uiAnchor: string;
 }
 
-class LayoutManager {
-    private jsonFilePath: string = `${app.configDir}/layout-manager/uiLayout.json`;
+export class LayoutManager {
+    private static jsonFilePath: string = `${app.configDir}/layout-manager/uiLayout.json`;
 
-    public GetAnchor(): string[] | null {
+    public static GetAnchor() {
         try {
             const Glib = imports.gi.GLib;
             const [, content] = Glib.file_get_contents(this.jsonFilePath);
@@ -23,12 +23,11 @@ class LayoutManager {
                 case 'right':
                     return ['right', 'top', 'bottom'];
                 default:
-                    console.error("Invalid anchor value in JSON:", data.uiAnchor);
-                    return null;
+                    return ['bottom', 'left', 'right'];
             }
         } catch (error) {
             console.error("Error reading JSON file:", error);
-            return null;
+            return ['bottom', 'left', 'right'];
         }
     }
 }

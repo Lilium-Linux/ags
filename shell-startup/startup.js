@@ -10,31 +10,30 @@ if (version.ags[1] < version.expect[1] || version.ags[2] < version.expect[2]) {
     App.quit()
 }
 
+export async function Start() {
+    try {
+        if (bundler === "bun") {
+            await Utils.execAsync([
+                "bun", "build", entry,
+                "--outfile", outFile,
+                "--external", "resource://*",
+                "--external", "gi://*",
+                "--external", "file://*",
+            ]);
+        } else if (bundler === "esbuild") {
+            await Utils.execAsync([
+                "esbuild", "--bundle", entry,
+                "--format=esm",
+                `--outfile=${outFile}`,
+                "--external:resource://*",
+                "--external:gi://*",
+                "--external:file://*",
+            ]);
+        } else throw `"${bundler}" is not a valid bundler`
 
-try {
-    if (bundler === "bun") {
-        await Utils.execAsync([
-            "bun", "build", entry,
-            "--outfile", outFile,
-            "--external", "resource://*",
-            "--external", "gi://*",
-            "--external", "file://*",
-        ]);
-    } else if (bundler === "esbuild") {
-        await Utils.execAsync([
-            "esbuild", "--bundle", entry,
-            "--format=esm",
-            `--outfile=${outFile}`,
-            "--external:resource://*",
-            "--external:gi://*",
-            "--external:file://*",
-        ]);
-    } else throw `"${bundler}" is not a valid bundler`
-
-    await import(`file://${outFile}`)
-} catch (error) {
-    console.error(error);
-    App.quit()
+        await import(`file://${outFile}`)
+    } catch (error) {
+        console.error(error);
+        App.quit()
+    }
 }
-
-export { }
