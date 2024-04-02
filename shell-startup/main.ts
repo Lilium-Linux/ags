@@ -1,7 +1,7 @@
 //import { LayoutManager } from "layout-manager/LayoutManager"
 
 function SpawnTestAddon() {
-    if(App.getWindow("addon-window"))
+    if(!App.getWindow("addon-window"))
         App.addWindow(TestAddonWindow());
 }
 
