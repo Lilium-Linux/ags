@@ -14,6 +14,7 @@ function TestBar(){
 function TestAddonWindow() {
     return Widget.Window({
         name: "addon-window",
+        visible: false,
         anchor: ["top", "right", "left"],//LayoutManager.GetAnchor()
         exclusivity: "exclusive",
         child: Widget.Label({
