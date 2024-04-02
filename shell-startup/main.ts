@@ -2,6 +2,7 @@
 
 function TestBar(){
     return Widget.Window({
+        name: "bar",
         anchor: ["top", "right", "left"],//LayoutManager.GetAnchor()
         exclusivity: "exclusive",
         child: Widget.Button({
