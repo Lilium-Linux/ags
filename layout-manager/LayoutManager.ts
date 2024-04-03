@@ -9,8 +9,8 @@ export class LayoutManager {
         try {
             const Glib = imports.gi.GLib;
             const [, content] = Glib.file_get_contents(this.jsonFilePath);
-
             const data: AnchorData = JSON.parse(content.toString());
+            console.log(data + " THERE IS YOUR JSON VAR");
             switch(data.uiAnchor) {
                 case 'bottom':
                     return ['bottom', 'left', 'right'];
