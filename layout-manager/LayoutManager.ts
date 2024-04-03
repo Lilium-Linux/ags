@@ -1,11 +1,9 @@
-import app from "../types/app";
-
 interface AnchorData {
     uiAnchor: string;
 }
 
 export class LayoutManager {
-    private static jsonFilePath: string = `${app.configDir}/layout-manager/uiLayout.json`;
+    private static jsonFilePath: string = `${App.configDir}/layout-manager/uiLayout.json`;
 
     public static GetAnchor() : ("bottom" | "left" | "right" | "top" )[] {
         try {
