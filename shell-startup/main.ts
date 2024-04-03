@@ -1,4 +1,4 @@
-//import { LayoutManager } from "layout-manager/LayoutManager"
+import { LayoutManager } from "layout-manager/LayoutManager"
 
 function TestBar(){
     return Widget.Window({
@@ -16,11 +16,11 @@ function TestAddonWindow() {
     return Widget.Window({
         name: "addon-window",
         visible: false,
-        anchor: ["top", "right", "left"],//LayoutManager.GetAnchor()
+        anchor: LayoutManager.GetAnchor(),
         exclusivity: "exclusive",
         child: Widget.Label({
             label: "Addon"
-        })
+        }),
     })
 }
 

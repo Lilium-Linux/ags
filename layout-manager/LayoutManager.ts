@@ -7,7 +7,7 @@ interface AnchorData {
 export class LayoutManager {
     private static jsonFilePath: string = `${app.configDir}/layout-manager/uiLayout.json`;
 
-    public static GetAnchor() {
+    public static GetAnchor() : ("bottom" | "left" | "right" | "top" )[] {
         try {
             const Glib = imports.gi.GLib;
             const [, content] = Glib.file_get_contents(this.jsonFilePath);
