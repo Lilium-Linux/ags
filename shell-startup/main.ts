@@ -3,7 +3,7 @@ import { LayoutManager } from "layout-manager/LayoutManager"
 function TestBar(){
     return Widget.Window({
         name: "bar",
-        anchor: ["top", "right", "left"],//LayoutManager.GetAnchor()
+        anchor: LayoutManager.GetAnchor(),
         exclusivity: "exclusive",
         child: Widget.Button({
             label: "Toggle addon",
