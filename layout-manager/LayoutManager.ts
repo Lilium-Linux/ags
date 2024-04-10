@@ -5,11 +5,11 @@ interface AnchorData {
 export class LayoutManager {
     private static jsonFilePath: string = `${App.configDir}/layout-manager/uiLayout.json`;
 
-    public static GetAnchor() : ("bottom" | "left" | "right" | "top" )[] {
+    public static getAnchor() : ("bottom" | "left" | "right" | "top" )[] {
         try {
             const content = Utils.readFile(this.jsonFilePath);
             const data: AnchorData = JSON.parse(content.toString());
-            console.log(data.uiAnchor + " THERE IS YOUR JSON VAR");
+
             switch(data.uiAnchor) {
                 case 'bottom':
                     return ['bottom', 'left', 'right'];
