@@ -1,7 +1,7 @@
 import GLib from "gi://GLib"
 
 const outFile = "/tmp/ags/main.js"
-const entry = `${App.configDir}/shell-startup/main.ts`
+const entry = `${App.configDir}/services/shell-startup/main.ts`
 const bundler = GLib.getenv("AGS_BUNDLER") || "bun"
 
 const version = {ags: pkg.version?.split(".").map(Number) || [], expect: [1, 8, 0],}
