@@ -5,6 +5,5 @@ App.config({
     windows: [
         BarView.BuildBar(0),
         BarView.BuildBar(1),
-        BarView.BuildBar(2),
     ]
 })
