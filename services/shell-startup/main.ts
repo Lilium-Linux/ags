@@ -1,4 +1,4 @@
-import "../resources/Global.ts"
+import "resources/Global"
 import { BarView } from "../../mvvm/views/bar/bar-view";
 
 App.config({
