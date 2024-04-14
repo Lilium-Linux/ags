@@ -24,6 +24,7 @@ export class BarView {
 
     private static Right(){
         return Widget.Box({
+            hpack: "end",
             spacing: 8,
             children: [
                 BarViewModel.getClock()
@@ -41,7 +42,7 @@ export class BarView {
             child: Widget.CenterBox({
                 start_widget: this.Left(),
                 center_widget: this.Center(),
-                end_widget: this.Right(),
+                end_widget: this.Right()
             })
         })
     }
