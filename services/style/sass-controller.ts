@@ -3,6 +3,7 @@ export class SassController {
     private static scss = `${App.configDir}/services/style/main.scss`;
     private static css = `${App.configDir}/services/style/_compiled-main.css`;
     public static LoadCss(){
+        this.applyScss();
         Utils.monitorFile(this.css, this.applyScss);
         return this.css;
     }
