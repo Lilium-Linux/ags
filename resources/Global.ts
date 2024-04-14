@@ -12,5 +12,5 @@ Object.assign(globalThis, {
     TEMP: `${GLib.get_user_cache_dir()}/ags/options.json`,
     USER: GLib.get_user_name(),
     OPTIONS: `${GLib.get_tmp_dir()}/assets`,
-    IMAGES: `${GLib.get_user_cache_dir()}/ags/resources/images`,
+    IMAGES: `${GLib.get_user_config_dir()}/ags/resources/images`,
 })
