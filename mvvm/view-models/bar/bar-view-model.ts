@@ -56,7 +56,7 @@ export class BarViewModel{
 
     public static getLauncherButton(){
         return Widget.Button({
-            child: Widget.Icon({ icon: "../../../resources/images/lilium_logo.svg"}),
+            child: Widget.Icon({ icon: `${IMAGES}/lilium_logo.svg`}),
         })
     }
 }
