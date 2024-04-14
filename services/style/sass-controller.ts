@@ -1,12 +1,9 @@
-import { monitorFile } from "../../types/utils";
-
-
 export class SassController {
 
     private static scss = `${App.configDir}/services/style/main.scss`;
     private static css = `${App.configDir}/services/style/_compiled-main.css`;
     public static LoadCss(){
-        monitorFile(this.css, this.applyScss);
+        Utils.monitorFile(this.css, this.applyScss);
         return this.css;
     }
     private static applyScss(){
