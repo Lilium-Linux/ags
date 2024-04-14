@@ -1,4 +1,7 @@
+$theme_bg_color: #ffffff;
+$theme_fg_color: #000000;
+
 window.bar{
-  background-color: @theme_bg_color;
-  color: @theme_fg_color;
+  background-color: $theme_bg_color;
+  color: $theme_fg_color;
 }
