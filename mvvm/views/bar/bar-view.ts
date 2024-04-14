@@ -8,7 +8,7 @@ export class BarView {
         return Widget.Box({
             spacing: 8,
             children: [
-                BarViewModel.getSystemTray()
+                BarViewModel.getLauncherButton()
             ],
         })
     }

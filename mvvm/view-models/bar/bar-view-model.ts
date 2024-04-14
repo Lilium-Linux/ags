@@ -1,25 +1,24 @@
-import { date, hyprlandService, tray } from "../../models/bar/bar-model";
-//import hyprland from "../../../types/service/hyprland";
+import * as model from "../../models/bar/bar-model";
 
 export class BarViewModel{
 
     public static getClock(){
         let labelWidget = Widget.Label();
         labelWidget.class_name = "clock";
-        labelWidget.bind("label", date, "value");
+        labelWidget.bind("label", model.date, "value");
 
         return labelWidget;
     }
 
     public static getWorkspaces(){
-        const activeWorkspaceId = hyprlandService.active.workspace.bind("id");
+        const activeWorkspaceId = model.hyprlandService.active.workspace.bind("id");
 
-        const workspaceButtons = hyprlandService.bind("workspaces").as(workspaces => {
+        const workspaceButtons = model.hyprlandService.bind("workspaces").as(workspaces => {
             return workspaces.map(workspace => {
                 const { id } = workspace;
 
                 const buttonProps = {
-                    on_clicked: () => hyprlandService.messageAsync(`dispatch workspace ${id}`),
+                    on_clicked: () => model.hyprlandService.messageAsync(`dispatch workspace ${id}`),
                     child: Widget.Label(`${id}`),
                     class_name: activeWorkspaceId.as(activeId => `${activeId === id ? "focused" : ""}`),
                 };
@@ -35,7 +34,7 @@ export class BarViewModel{
     }
 
     public static getSystemTray() {
-        const trayItems = tray.bind("items").as(items => {
+        const trayItems = model.tray.bind("items").as(items => {
             return items.map(item => {
                 // Define button properties
                 const buttonProps = {
@@ -53,5 +52,11 @@ export class BarViewModel{
         return Widget.Box({
             children: trayItems,
         });
+    }
+
+    public static getLauncherButton(){
+        return Widget.Button({
+            child: Widget.Icon({ icon: "../../../resources/images/lilium_logo.svg"}),
+        })
     }
 }
