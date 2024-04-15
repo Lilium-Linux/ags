@@ -5,7 +5,7 @@ import * as styleController from "services/style/sass-controller"
 
 App.config({
     style: styleController.SassController.LoadCss(),
-    gtkTheme: "Adwaita-dark",
+    gtkTheme: GLib.getenv("GTK_THEME")!,
     cursorTheme: GLib.getenv("XCURSOR_THEME")!,
     windows: [
         BarView.BuildBar(0),
