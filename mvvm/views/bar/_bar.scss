@@ -8,11 +8,10 @@ window.bar{
 
 button{
   margin: 10px;
-  height: 40px;
-  width: 40px;
 }
 .logo{
   border-radius: 50%;
+  visibility: inherit;
   //min-width: 100%;
   //min-height: 100%;
 }
