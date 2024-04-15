@@ -33,7 +33,7 @@ export class BarView {
 
     public static BuildBar(monitor = 0){
         return Widget.Window({
-            name: `bar`,
+            name: `bar${monitor}`,
             class_name: 'bar',
             monitor,
             anchor: LayoutManager.getAnchor(),
