@@ -12,7 +12,8 @@ button{
 }
 .logo{
   border-radius: 50%;
-  width: 100%;
+  min-width: 100%;
+  min-height: 100%;
 }
 .clock{
   margin: 10px;
