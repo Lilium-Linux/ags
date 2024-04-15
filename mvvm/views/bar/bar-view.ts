@@ -32,10 +32,11 @@ export class BarView {
 
     public static BuildBar(monitor = 0){
         return Widget.Window({
+            monitor,
             name: `bar${monitor}`,
             class_name: 'bar',
-            monitor,
             anchor: LayoutManager.getAnchor(),
+            margins: [5, 5, 5, 5],
             exclusivity: "exclusive",
             child: Widget.CenterBox({
                 class_name: "bar",

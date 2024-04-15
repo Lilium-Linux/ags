@@ -1,15 +1,10 @@
 *:not(popover) { all: unset;}
 
-window.bar{
-  padding: 5px 5px 5px 5px;
-}
-
 box.bar{
   background-color: gray;
   border-radius: 5px;
   border-color: white;
   border-width: 5px;
-  padding: 5px 5px 5px 5px;
 }
 
 button{
