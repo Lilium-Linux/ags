@@ -1,13 +1,15 @@
 *:not(popover) { all: unset;}
 
+window.bar{
+  padding: 5px;
+}
+
 box.bar{
   background-color: transparent;
   border-radius: 50%;
   border-color: white;
   margin: 5px;
 }
-
-
 
 button{
   margin: 5px;
