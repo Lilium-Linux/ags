@@ -59,6 +59,7 @@ export class BarViewModel{
             class_name: "logo",
             on_clicked: async ()=> await Utils.execAsync("wofi --show drun"),
             child: Widget.Icon({
+                class_name: "logo-icon",
                 size: 30,
                 icon: `${IMAGES}/lilium_logo.svg`
             }),
