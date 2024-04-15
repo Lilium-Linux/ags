@@ -1,15 +1,15 @@
 *:not(popover) { all: unset;}
 
-box.bar{
-  background-color: gray;
-  border-radius: 5px;
+window.bar{
+  border-radius: 20px;
   border-color: white;
   border-width: 5px;
 }
 
-button{
-  margin: 5px;
+box.bar{
+  background-color: gray;
 }
+
 .logo{
   border-radius: 50%;
   min-width: 40px;
