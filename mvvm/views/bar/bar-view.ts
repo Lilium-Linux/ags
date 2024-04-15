@@ -38,6 +38,7 @@ export class BarView {
             anchor: LayoutManager.getAnchor(),
             exclusivity: "exclusive",
             child: Widget.CenterBox({
+                class_name: "bar",
                 start_widget: this.Left(),
                 center_widget: this.Center(),
                 end_widget: this.Right()
