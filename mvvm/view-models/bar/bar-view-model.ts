@@ -56,6 +56,7 @@ export class BarViewModel{
 
     public static getLauncherButton(){
         return Widget.Button({
+            class_name: "logo",
             on_clicked: async ()=> await Utils.execAsync("wofi --show drun"),
             child: Widget.Icon({
                 size: 30,
