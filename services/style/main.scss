@@ -1,1 +1,17 @@
-@import "../../mvvm/views/bar/bar";
+*:not(popover) {all: unset}
+
+$rounding_large: 1.7rem;
+
+@import "../../mvvm/views/bar/bar"; //BAR
+
+.growingRadial {
+  transition: 300ms cubic-bezier(0.2, 0.0, 0, 1.0);
+}
+.fadingRadial {
+  transition: 50ms cubic-bezier(0.2, 0.0, 0, 1.0);
+}
+.sidebar-pinned {
+  margin: 0;
+  border-radius: 0 0 $rounding_large 0;
+  border: 0 solid;
+}
