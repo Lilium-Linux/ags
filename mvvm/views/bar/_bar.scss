@@ -6,6 +6,10 @@ window.bar{
   color: $theme_fg_color;
 }
 
-button, label{
+button{
+  margin: 10px;
+}
+
+.clock{
   margin: 10px;
 }
