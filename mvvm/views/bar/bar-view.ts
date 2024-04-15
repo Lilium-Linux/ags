@@ -1,8 +1,6 @@
 import {BarViewModel} from "../../view-models/bar/bar-view-model";
 import { LayoutManager } from "../../../services/layout-manager/LayoutManager";
 
-
-
 export class BarView {
     private static Left(){
         return Widget.Box({
