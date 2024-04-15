@@ -1,5 +1,7 @@
-$theme_bg_color: #000000;
-$theme_fg_color: #ffffff;
+*:not(popover) { all: unset;}
+
+$theme_bg_color: rgb(0, 0, 0);
+$theme_fg_color: rgb(255, 255, 255);
 
 window.bar{
   background-color: $theme_bg_color;

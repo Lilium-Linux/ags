@@ -1,5 +1,6 @@
 import {BarViewModel} from "../../view-models/bar/bar-view-model";
 import { LayoutManager } from "../../../services/layout-manager/LayoutManager";
+import { hyprlandService } from "../../models/bar/bar-model";
 
 export class BarView {
     private static Left(){
@@ -32,7 +33,7 @@ export class BarView {
 
     public static BuildBar(monitor = 0){
         return Widget.Window({
-            name: `bar-${monitor}`,
+            name: `bar`,
             class_name: 'bar',
             monitor,
             anchor: LayoutManager.getAnchor(),
