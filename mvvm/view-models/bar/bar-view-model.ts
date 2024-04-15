@@ -56,7 +56,7 @@ export class BarViewModel{
 
     public static getLauncherButton(){
         return Widget.Button({
-            on_clicked: () => {Utils.exec("wofi --show drun")},
+            on_clicked: async ()=> await Utils.execAsync("wofi --show drun"),
             child: Widget.Icon({ icon: `${IMAGES}/lilium_logo.svg`}),
         })
     }
