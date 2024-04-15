@@ -4,6 +4,7 @@ $theme_bg_color: rgb(0, 0, 0);
 $theme_fg_color: rgb(255, 255, 255);
 
 window.bar{
+  opacity: 50%;
   background-color: $theme_bg_color;
   color: $theme_fg_color;
 }
