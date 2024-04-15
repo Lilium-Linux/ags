@@ -1,13 +1,14 @@
 *:not(popover) { all: unset;}
 
 window.bar{
-  border-radius: 20px;
-  border-color: white;
-  border-width: 5px;
+
 }
 
 box.bar{
   background-color: gray;
+  border-radius: 20px;
+  border-color: white;
+  border-width: 5px;
 }
 
 .logo{
