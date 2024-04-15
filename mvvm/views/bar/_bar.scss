@@ -11,19 +11,12 @@ button{
 }
 .logo{
   border-radius: 50%;
+  min-width: 100px;
+  min-height: 100px;
 }
 
 .logo-icon{
-  @keyframes spin {
-    to { -gtk-icon-transform: rotate(1turn); }
-  }
 
-  image.spinning {
-    animation-name: spin;
-    animation-duration: 1s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-  }
 }
 
 .clock{
