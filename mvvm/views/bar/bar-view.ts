@@ -36,7 +36,7 @@ export class BarView {
             name: `bar${monitor}`,
             class_name: 'bar',
             anchor: LayoutManager.getAnchor(),
-            margins: [0, 20],
+            margins: [0, 20, 0, 20],
             exclusivity: "exclusive",
             child: Widget.CenterBox({
                 class_name: "bar",
