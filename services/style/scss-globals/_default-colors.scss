@@ -10,36 +10,32 @@ $color-800: #842e87;
 $color-900: #672867;
 $color-950: #420f43;
 
-
 //--> Global
 $is-dark-theme: true;
-$global-bg: if($is-dark-theme, #2B2730, #FFF);
-//--> DT - Dark theme
+$global-bg: if($is-dark-theme, #000, $color-50);
+
 //BG
-$DT-main-bg: $color-950;
-$DT-contrast-bg: $color-900;
-//FG
-$DT-main-fg: $color-400;
-//text
-$DT-text: $color-50;
-$DT-dark-text: $color-600;
-$DT-disabled-text: $color-700;
-$DT-outline-disabled-text: $color-200;
+$main-bg: if($is-dark-theme, $color-950, $color-200);
+$contrast-bg: $color-600; //-> DOESN'T DEPEND ON THE COLOR THEME
 
-//flat-buttons
-$DT-flat-button-default: $color-500; //-> DOESN'T DEPEND ON THE COLOR THEME
-$DT-flat-button-hover: $color-600; //-> DOESN'T DEPEND ON THE COLOR THEME
-$DT-flat-button-active: $color-700; //-> DOESN'T DEPEND ON THE COLOR THEME
-$DT-flat-button-disabled: $DT-contrast-bg;
-$DT-flat-button-disabled-text: $DT-disabled-text;
+//BORDER
+$border: if($is-dark-theme, $color-900, $color-200);
 
-//otline-buttons
-$DT-outline-button-border-default: $color-500; //-> DOESN'T DEPEND ON THE COLOR THEME
-$DT-outline-button-border-hover: $color-600; //-> DOESN'T DEPEND ON THE COLOR THEME
-$DT-outline-button-border-active: $color-700; //-> DOESN'T DEPEND ON THE COLOR THEME
-$DT-outline-button-border-disabled: $DT-contrast-bg;
-$DT-outline-button-text-disabled: $DT-disabled-text;
+//TEXT
+$text: if($is-dark-theme, $color-50, $color-950); //$color-50;
+$secondary-text: if($is-dark-theme, $color-200, $color-900);//$color-600;
+$disabled-text: if($is-dark-theme, $color-700, $color-400);//$color-700;
 
-//hint
-$DT-dark-hint-bg: $DT-contrast-bg;
-$DT-dark-hint-fg: $DT-main-fg;
+//FLAT-BUTTONS
+$flat-button-default: $color-500; //-> DOESN'T DEPEND ON THE COLOR THEME
+$flat-button-hover: $color-600; //-> DOESN'T DEPEND ON THE COLOR THEME
+$flat-button-active: $color-700; //-> DOESN'T DEPEND ON THE COLOR THEME
+$flat-button-disabled: $main-bg;
+$flat-button-disabled-text: $disabled-text;
+
+//OUTLINE-BUTTONS
+$outline-button-border-default: $color-500; //-> DOESN'T DEPEND ON THE COLOR THEME
+$outline-button-border-hover: $color-600; //-> DOESN'T DEPEND ON THE COLOR THEME
+$outline-button-border-active: $color-700; //-> DOESN'T DEPEND ON THE COLOR THEME
+$outline-button-border-disabled: $border;
+$outline-button-text-disabled: $border;
