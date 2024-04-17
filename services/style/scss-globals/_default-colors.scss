@@ -1,0 +1,45 @@
+$color-50: #fcf6fd;
+$color-100: #f9ebfc;
+$color-200: #f2d7f7;
+$color-300: #e9b7f0;
+$color-400: #de8ce6;
+$color-500: #cb5fd6;
+$color-600: #b140b9;
+$color-700: #943299;
+$color-800: #842e87;
+$color-900: #672867;
+$color-950: #420f43;
+
+
+//--> Global
+$is-dark-theme: true;
+$global-bg: if($is-dark-theme, #2B2730, #FFF);
+//--> DT - Dark theme
+//BG
+$DT-main-bg: $color-950;
+$DT-contrast-bg: $color-900;
+//FG
+$DT-main-fg: $color-400;
+//text
+$DT-text: $color-50;
+$DT-dark-text: $color-600;
+$DT-disabled-text: $color-700;
+$DT-outline-disabled-text: $color-200;
+
+//flat-buttons
+$DT-flat-button-default: $color-500; //-> DOESN'T DEPEND ON THE COLOR THEME
+$DT-flat-button-hover: $color-600; //-> DOESN'T DEPEND ON THE COLOR THEME
+$DT-flat-button-active: $color-700; //-> DOESN'T DEPEND ON THE COLOR THEME
+$DT-flat-button-disabled: $DT-contrast-bg;
+$DT-flat-button-disabled-text: $DT-disabled-text;
+
+//otline-buttons
+$DT-outline-button-border-default: $color-500; //-> DOESN'T DEPEND ON THE COLOR THEME
+$DT-outline-button-border-hover: $color-600; //-> DOESN'T DEPEND ON THE COLOR THEME
+$DT-outline-button-border-active: $color-700; //-> DOESN'T DEPEND ON THE COLOR THEME
+$DT-outline-button-border-disabled: $DT-contrast-bg;
+$DT-outline-button-text-disabled: $DT-disabled-text;
+
+//hint
+$DT-dark-hint-bg: $DT-contrast-bg;
+$DT-dark-hint-fg: $DT-main-fg;
