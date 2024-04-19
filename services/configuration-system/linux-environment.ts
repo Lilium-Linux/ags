@@ -49,7 +49,7 @@ export class LinuxEnvironmentHandler {
 
     public static setEnv(json: any){
         envs.forEach((value, key) => {
-            console.log(`${value} = ${key}`)
+            console.log(`${key} = ${json[value]}`)
         });
     }
 
