@@ -48,8 +48,10 @@ export class LinuxEnvironmentHandler {
     }
 
     public static setEnv(json: any){
+        console.log("Loading envs...")
         envs.forEach((value, key) => {
-            console.log(`${key} = ${json[value]}`)
+            GLib.setenv(key, json[value], true);
+            console.log(`Loaded: ${key} = ${json[value]}`)
         });
     }
 
