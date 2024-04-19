@@ -1,3 +1,4 @@
+$is-dark-theme: true;
 $color-50: #fcf6fd;
 $color-100: #f9ebfc;
 $color-200: #f2d7f7;
@@ -11,7 +12,6 @@ $color-900: #672867;
 $color-950: #420f43;
 
 //--> Global
-$is-dark-theme: true;
 $global-bg: if($is-dark-theme, #000, $color-50);
 
 //BG
