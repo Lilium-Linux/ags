@@ -51,7 +51,7 @@ export class LinuxEnvironmentHandler {
         console.log("Loading envs...")
         envs.forEach((value, key) => {
             //GLib.setenv(key, json[value], true);
-            Utils.exec(`export ${key}=${json[value]}`);
+            Utils.exec(`bash -c "export ${key}=${json[value]}"`);
             console.log(`Loaded: ${key} = ${json[value]}`)
         });
     }
