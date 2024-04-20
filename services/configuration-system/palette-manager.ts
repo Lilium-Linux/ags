@@ -26,7 +26,7 @@ export class PaletteManager {
         const rawPalette = Utils.readFile(`${PALETTES}/${style.palette}.json`);
         this.Palette = JSON.parse(rawPalette.toString());
 
-        console.log("Style:\n" + style);
-        console.log("Palette:\n" + this.Palette);
+        console.log("Style:\n" + rawStyle);
+        console.log("Palette:\n" + rawPalette);
     }
 }
