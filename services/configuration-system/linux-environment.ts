@@ -1,9 +1,5 @@
 import GLib from "gi://GLib?version=2.0";
 
-function getEnumName<T extends Record<string, unknown>>(enumObj: T, value: T[keyof T]): string | undefined {
-    return Object.keys(enumObj).find(key => enumObj[key] === value);
-}
-
 const envs: Map<string, string> = new Map([
     ["LILIUM_PALETTE_NAME", "Name"],
     ["LILIUM_DARK_THEME", "$is-dark-theme"],
@@ -56,11 +52,4 @@ export class LinuxEnvironmentHandler {
         });
     }
 
-    private envsInitialized(){
-        const paletteString = getEnumName(
-            LinuxThemeEnvironments,
-            LinuxThemeEnvironments[LinuxThemeEnvironments.LILIUM_PALETTE_NAME]);
-
-        return typeof paletteString === 'string';
-    }
 }

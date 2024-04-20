@@ -3,7 +3,7 @@ interface AnchorData {
 }
 
 export class LayoutManager {
-    private static jsonFilePath: string = `${App.configDir}/services/layout-manager/uiLayout.json`;
+    private static jsonFilePath: string = `${App.configDir}/services/layout-manager/layout.json`;
 
     public static getAnchor() : ("bottom" | "left" | "right" | "top" )[] {
         try {
