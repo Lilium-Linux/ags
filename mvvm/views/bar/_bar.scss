@@ -1,10 +1,6 @@
-*:not(popover) { all: unset;}
-
 box.bar{
-  background-color: gray;
+  background-color: $main-bg;
   border-radius: 20px;
-  border-color: #ffffff;
-  border-width: 5px;
 }
 
 .logo{
@@ -15,4 +11,5 @@ box.bar{
 
 .clock{
   margin-right: 10px;
+  color: $text;
 }
