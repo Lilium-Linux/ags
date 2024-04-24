@@ -3,7 +3,8 @@
 label{
   color: $text;
 }
-box{
+
+box, center{
   background-color: $main-bg;
   border-radius: $corner-radius;
 }

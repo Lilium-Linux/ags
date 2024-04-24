@@ -1,7 +1,8 @@
+*:not(popover) { all: unset;}
+
 @import "../../mvvm/views/bar/bar";
 @import "scss-globals/mixins";
 @import "scss-globals/theme";
 @import "scss-globals/default-scheme";
 @import "scss-globals/palette";
 
-*:not(popover) { all: unset;}
