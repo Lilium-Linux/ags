@@ -1,6 +1,7 @@
 import * as model from "../../models/bar/bar-model";
 import { LayoutManager } from "../../../services/layout-manager/LayoutManager";
 import { PaletteManager } from "../../../services/configuration-system/palette-manager";
+import { getLiliumLogo } from "../../models/bar/bar-model";
 
 export class BarViewModel{
 
@@ -58,9 +59,9 @@ export class BarViewModel{
 
     public static getLauncherButton(){
         const isDarkTheme = PaletteManager.Palette["$is-dark-theme"];
-        const lilimLogoPath = isDarkTheme ? model.liliumLogoLight : model.liliumLogoDark;
+        const lilimLogoPath = getLiliumLogo()//isDarkTheme ? model.liliumLogoLight : model.liliumLogoDark;
         console.log(`Lilium logo: ${lilimLogoPath}`);
-        console.log(`IsDarkTheme: ${isDarkTheme}`)
+        console.log(`IsDarkTheme: ${isDarkTheme}`);
         return Widget.Button({
             class_name: "logo-button",
             on_clicked: async ()=> await Utils.execAsync("wofi --show drun"),
