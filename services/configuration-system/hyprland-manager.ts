@@ -11,7 +11,7 @@ export class HyprlandManager
         const gapsIn = LayoutManager.layout.gaps;
         const gapsOut = LayoutManager.layout.gaps * 2;
         const activeBorder =
-            `${PaletteManager.Palette["$color-600"]}ee ${PaletteManager.Palette["$color-950"]}ee ${LayoutManager.layout.borderAngle}deg`;
+            `${PaletteManager.Palette["$color-600"]} ${PaletteManager.Palette["$color-950"]} ${LayoutManager.layout.borderAngle}deg`;
         //const activeBorder = `rgba(${PaletteManager.Palette["$color-600"]}ee) rgba(${PaletteManager.Palette["$color-950"]}ee) ${LayoutManager.layout.borderAngle}deg`;
         //const inactiveBorder = `rgba(${PaletteManager.Palette["$color-600"]}ee)`;
 
