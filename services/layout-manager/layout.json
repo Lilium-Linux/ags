@@ -1,4 +1,5 @@
 {
   "uiAnchor": "bottom",
-  "gaps": 5
+  "gaps": 20,
+  "rounding": 20
 }
