@@ -11,7 +11,7 @@ box.bar{
 }
 
 .logo-icon{
-  fill: $contrast-bg;
+  -gtk-icon-palette: $contrast-bg;
 }
 
 .clock{
