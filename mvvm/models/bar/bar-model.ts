@@ -8,5 +8,8 @@ export const liliumLogoLight = `${IMAGES}/lilium_logo_light.svg`;
 export const liliumLogoDark = `${IMAGES}/lilium_logo_dark.svg`;
 
 export function getLiliumLogo(isDarkTheme: boolean) {
-    return isDarkTheme ? `${IMAGES}/lilium_logo_light.svg` : `${IMAGES}/lilium_logo_dark.svg`;
+    if (isDarkTheme === true)
+        return `${IMAGES}/lilium_logo_light.svg`;
+    else
+        return `${IMAGES}/lilium_logo_dark.svg`;
 }
