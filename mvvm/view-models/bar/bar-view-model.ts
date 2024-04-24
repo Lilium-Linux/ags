@@ -57,6 +57,8 @@ export class BarViewModel{
     }
 
     public static getLauncherButton(){
+        console.log(`Lilium logo: ${PaletteManager.Palette["$is-dark-theme"] ? model.liliumLogoLight : model.liliumLogoDark}`);
+
         return Widget.Button({
             class_name: "logo-button",
             on_clicked: async ()=> await Utils.execAsync("wofi --show drun"),
