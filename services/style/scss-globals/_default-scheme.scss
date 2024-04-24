@@ -1,3 +1,9 @@
-window{
+@import "theme";
 
+label{
+  color: $text;
+}
+window{
+  background-color: $main-bg;
+  border-radius: $corner-radius;
 }

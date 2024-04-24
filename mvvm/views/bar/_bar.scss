@@ -1,7 +1,6 @@
 @import "../../../services/style/scss-globals/theme";
 
 box.bar{
-  background-color: $main-bg;
   border-radius: $corner-radius;
 }
 
@@ -16,5 +15,4 @@ box.bar{
 
 .clock{
   margin-right: 10px;
-  color: $text;
 }
