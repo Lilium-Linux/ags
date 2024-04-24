@@ -13,7 +13,7 @@ export class HyprlandManager
         const gapsOut = LayoutManager.layout.gaps * 2;
         const rounding = LayoutManager.layout.rounding;
 
-        const activeBorder = `0x${borderMainColor}ee 0x${borderSecondaryColor}ee ${LayoutManager.layout.borderAngle}deg`;
+        const activeBorder = `${borderMainColor} ${borderSecondaryColor} ${LayoutManager.layout.borderAngle}deg`;
         //const activeBorder = `rgba(${PaletteManager.Palette["$color-600"]}ee) rgba(${PaletteManager.Palette["$color-950"]}ee) ${LayoutManager.layout.borderAngle}deg`;
         //const inactiveBorder = `rgba(${PaletteManager.Palette["$color-600"]}ee)`;
 
