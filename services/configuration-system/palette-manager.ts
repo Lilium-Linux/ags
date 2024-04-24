@@ -1,6 +1,4 @@
-import Gio from "@girs/gio-2.0";
 import GLib from "gi://GLib?version=2.0";
-
 
 interface Style{
     palette: string;

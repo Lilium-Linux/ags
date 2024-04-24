@@ -1,3 +1,5 @@
 {
-  "palette": "Default"
+  "palette": "Default",
+  "@border-radius": 20
+
 }

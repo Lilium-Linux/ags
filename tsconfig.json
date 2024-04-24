@@ -13,6 +13,13 @@
     "typeRoots": [
       "./types"
     ],
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    //PATHS
+    "paths": {
+      "@mvvm": ["mvvm/*"],
+      "@resources": ["resources/*"],
+      "@services": ["services/*"],
+      "@style": ["services/style/*"]
+    }
   }
 }
