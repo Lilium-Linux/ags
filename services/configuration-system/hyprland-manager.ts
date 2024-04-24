@@ -19,7 +19,7 @@ export class HyprlandManager
 
         await this.setHyprlandConfig("general:gaps_in", gapsIn.toString());
         await this.setHyprlandConfig("general:gaps_out", gapsOut.toString());
-        await this.setHyprlandConfig("decorations:rounding", rounding.toString());
+        await this.setHyprlandConfig("decoration:rounding", rounding.toString());
         await this.setHyprlandConfig("general:col.active_border", activeBorder);
         //await this.setHyprlandConfig("general:col.inactive_border", LayoutManager.layout.gaps.toString());
     }
