@@ -10,7 +10,7 @@ $contrast-bg: $color-600; //-> DOESN'T DEPEND ON THE COLOR THEME
 
 //BORDER
 $border: if($is-dark-theme, $color-900, $color-200);
-$corner-radius = $rounding;
+$corner-radius: $rounding;
 
 //TEXT
 $text: if($is-dark-theme, $color-50, $color-950); //$color-50;
