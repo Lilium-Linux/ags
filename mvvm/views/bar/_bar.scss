@@ -5,10 +5,13 @@ box.bar{
   border-radius: $corner-radius;
 }
 
-.logo{
-  color: $contrast-bg;
+.logo-button{
   min-width: 40px;
   min-height: 40px;
+}
+
+.logo-icon{
+  color: $contrast-bg;
 }
 
 .clock{
