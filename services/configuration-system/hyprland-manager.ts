@@ -7,23 +7,19 @@ export const hyprlandService = await Service.import("hyprland");
 export class HyprlandManager
 {
     public static async updateHyprland() {
-        const borderMainColor = this.getByteColor(PaletteManager.Palette["$color-600"]);
-        const borderSecondaryColor = this.getByteColor(PaletteManager.Palette["$color-950"]);
+        const activeBorderColor = this.getByteColor(PaletteManager.Palette["$color-600"]);
+        const inactiveBorderColor = this.getByteColor(PaletteManager.Palette["$color-950"]);
         const borderSize = LayoutManager.layout.borderSize;
         const gapsIn = LayoutManager.layout.gaps;
         const gapsOut = LayoutManager.layout.gaps * 2;
         const rounding = LayoutManager.layout.rounding;
 
-        const activeBorder = `${borderMainColor} ${borderSecondaryColor} ${LayoutManager.layout.borderAngle}deg`;
-        //const activeBorder = `rgba(${PaletteManager.Palette["$color-600"]}ee) rgba(${PaletteManager.Palette["$color-950"]}ee) ${LayoutManager.layout.borderAngle}deg`;
-        //const inactiveBorder = `rgba(${PaletteManager.Palette["$color-600"]}ee)`;
-
         await this.setHyprlandConfig("general:gaps_in", gapsIn.toString());
         await this.setHyprlandConfig("general:gaps_out", gapsOut.toString());
         await this.setHyprlandConfig("decoration:rounding", rounding.toString());
-        await this.setHyprlandConfig("general:col.active_border", activeBorder);
+        await this.setHyprlandConfig("general:col.active_border", activeBorderColor);
+        await this.setHyprlandConfig("general:col.inactive_border", inactiveBorderColor);
         await this.setHyprlandConfig("general:border_size", borderSize.toString());
-        //await this.setHyprlandConfig("general:col.inactive_border", LayoutManager.layout.gaps.toString());
     }
 
     private static async setHyprlandConfig(key: string, value: string) {
