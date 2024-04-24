@@ -10,7 +10,7 @@ export class HyprlandManager
         const activeBorderColor = this.getByteColor(PaletteManager.Palette["$color-600"]);
         const inactiveBorderColor = this.getByteColor(PaletteManager.Palette["$color-950"]);
         const borderSize = LayoutManager.layout.borderSize;
-        const gapsIn = LayoutManager.layout.gaps - LayoutManager.layout.borderSize;
+        const gapsIn = LayoutManager.layout.gaps + LayoutManager.layout.borderSize;
         const gapsOut = gapsIn * 2;
         const rounding = LayoutManager.layout.rounding;
 
