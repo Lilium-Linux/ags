@@ -10,6 +10,7 @@ interface Style{
 
 interface Palette {
     "$is-dark-theme": boolean;
+    "$rounding": string;
     "$color-50": string;
     "$color-100": string;
     "$color-200": string;
