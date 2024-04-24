@@ -12,7 +12,7 @@ export class HyprlandManager
         const borderSize = LayoutManager.layout.borderSize;
         const gapsIn = LayoutManager.layout.gaps + LayoutManager.layout.borderSize;
         const gapsOut = gapsIn * 2;
-        const rounding = LayoutManager.layout.rounding;
+        const rounding = PaletteManager.Palette.$rounding.slice(0, -2);
 
         await this.setHyprlandConfig("general:gaps_in", gapsIn.toString());
         await this.setHyprlandConfig("general:gaps_out", gapsOut.toString());
