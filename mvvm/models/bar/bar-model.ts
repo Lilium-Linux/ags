@@ -12,5 +12,4 @@ export function getLiliumLogo(isDarkTheme: boolean) {
         return `${IMAGES}/lilium_logo_light.svg`;
     else if (!isDarkTheme)
         return `${IMAGES}/lilium_logo_dark.svg`;
-    else return `${IMAGES}/lilium_logo_light.svg`;
 }
