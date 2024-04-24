@@ -10,9 +10,8 @@ export class HyprlandManager
         const someData = PaletteManager.Palette["$color-950"]
         const gapsIn = LayoutManager.layout.gaps;
         const gapsOut = LayoutManager.layout.gaps * 2;
-        const activeBorder = `rgba(${PaletteManager.Palette["$color-600"]}ee) 
-                                    rgba(${PaletteManager.Palette["$color-950"]}ee) 
-                                    ${LayoutManager.layout.borderAngle}deg`;
+        const activeBorder
+            = `rgba(${PaletteManager.Palette["$color-600"]}ee) rgba(${PaletteManager.Palette["$color-950"]}ee) ${LayoutManager.layout.borderAngle}deg`;
         //const inactiveBorder = `rgba(${PaletteManager.Palette["$color-600"]}ee)`;
 
         await this.setHyprlandConfig("general:gaps_in", gapsIn.toString());
