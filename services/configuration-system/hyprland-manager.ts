@@ -1,6 +1,8 @@
 import { LayoutManager } from "services/layout-manager/LayoutManager";
-import hyprland from "../../types/service/hyprland";
+//import hyprland from "../../types/service/hyprland";
 import { PaletteManager } from "./palette-manager";
+export const hyprlandService = await Service.import("hyprland");
+
 
 export class HyprlandManager
 {
@@ -21,6 +23,6 @@ export class HyprlandManager
 
     private static async setHyprlandConfig(key: string, value: string) {
         console.log(`Hyprland config updated:  ${key} = ${value}`);
-        await hyprland.messageAsync(`keyword ${key} ${value}`);
+        await hyprlandService.messageAsync(`keyword ${key} ${value}`);
     }
 }
