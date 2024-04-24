@@ -1,4 +1,6 @@
 import * as model from "../../models/bar/bar-model";
+import { LayoutManager } from "../../../services/layout-manager/LayoutManager";
+import { PaletteManager } from "../../../services/configuration-system/palette-manager";
 
 export class BarViewModel{
 
@@ -61,7 +63,7 @@ export class BarViewModel{
             child: Widget.Icon({
                 class_name: "logo-icon",
                 size: 30,
-                icon: `${IMAGES}/lilium_logo.svg`
+                icon: PaletteManager.Palette["$is-dark-theme"] ? model.liliumLogoDark : model.liliumLogoLight,
             }),
         })
     }
