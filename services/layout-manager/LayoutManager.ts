@@ -3,6 +3,7 @@ interface Layout {
     gaps: number;
     rounding: number;
     borderAngle: number;
+    borderSize: number;
 }
 
 export class LayoutManager {

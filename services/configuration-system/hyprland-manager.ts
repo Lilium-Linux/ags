@@ -9,6 +9,7 @@ export class HyprlandManager
     public static async updateHyprland() {
         const borderMainColor = this.getByteColor(PaletteManager.Palette["$color-600"]);
         const borderSecondaryColor = this.getByteColor(PaletteManager.Palette["$color-950"]);
+        const borderSize = LayoutManager.layout.borderSize;
         const gapsIn = LayoutManager.layout.gaps;
         const gapsOut = LayoutManager.layout.gaps * 2;
         const rounding = LayoutManager.layout.rounding;
