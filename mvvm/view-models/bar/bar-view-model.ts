@@ -61,7 +61,7 @@ export class BarViewModel{
             on_clicked: async ()=> await Utils.execAsync("wofi --show drun"),
             child: Widget.Icon({
                 class_name: "logo-icon",
-                size: 30,
+                size: 40,
                 icon: PaletteManager.Palette["$is-dark-theme"].toString() == "true"
                     ? model.liliumLogoLight
                     : model.liliumLogoDark,
