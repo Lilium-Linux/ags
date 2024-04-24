@@ -63,7 +63,7 @@ export class BarViewModel{
             child: Widget.Icon({
                 class_name: "logo-icon",
                 size: 30,
-                icon: PaletteManager.Palette["$is-dark-theme"] ? model.liliumLogoLight : model.liliumLogoDark,
+                icon: model.liliumLogoDark,
             }),
         })
     }
