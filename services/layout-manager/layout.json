@@ -1,7 +1,7 @@
 {
   "uiAnchor": "bottom",
-  "gaps": 5,
+  "gaps": 10,
   "rounding": 20,
   "borderAngle": 45,
-  "borderSize": 5
+  "borderSize": 3
 }
