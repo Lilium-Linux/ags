@@ -59,7 +59,7 @@ export class BarViewModel{
 
     public static getLauncherButton(){
         const isDarkTheme = PaletteManager.Palette["$is-dark-theme"];
-        const lilimLogoPath = getLiliumLogo()//isDarkTheme ? model.liliumLogoLight : model.liliumLogoDark;
+        const lilimLogoPath = getLiliumLogo(isDarkTheme)//isDarkTheme ? model.liliumLogoLight : model.liliumLogoDark;
         console.log(`Lilium logo: ${lilimLogoPath}`);
         console.log(`IsDarkTheme: ${isDarkTheme}`);
         return Widget.Button({
