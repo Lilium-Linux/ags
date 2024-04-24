@@ -2,6 +2,10 @@ import GLib from "gi://GLib?version=2.0";
 
 interface Style{
     palette: string;
+    gaps_in: number;
+    rounding: number;
+    active_border: string;
+    inactive_border: string;
 }
 
 interface Palette {

@@ -1,3 +1,4 @@
 {
-  "uiAnchor": "top"
+  "uiAnchor": "bottom",
+  "gaps": 10
 }
