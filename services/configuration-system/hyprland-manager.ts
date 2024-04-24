@@ -7,8 +7,8 @@ export const hyprlandService = await Service.import("hyprland");
 export class HyprlandManager
 {
     public static async updateHyprland() {
-        const borderMainColor = PaletteManager.Palette["$color-950"].slice(1);
-        const borderSecondaryColor = PaletteManager.Palette["$color-600"].slice(1);
+        const borderMainColor = this.getByteColor(PaletteManager.Palette["$color-600"]);
+        const borderSecondaryColor = this.getByteColor(PaletteManager.Palette["$color-950"]);
         const gapsIn = LayoutManager.layout.gaps;
         const gapsOut = LayoutManager.layout.gaps * 2;
         const rounding = LayoutManager.layout.rounding;
@@ -27,5 +27,10 @@ export class HyprlandManager
     private static async setHyprlandConfig(key: string, value: string) {
         console.log(`Hyprland config updated:  ${key} = ${value}`);
         await hyprlandService.messageAsync(`keyword ${key} ${value}`);
+    }
+
+    private static getByteColor(hexColor: string){
+        const rawValue = hexColor.slice(1);
+        return `0xff${rawValue}`;
     }
 }
