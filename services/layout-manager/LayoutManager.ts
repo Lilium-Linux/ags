@@ -2,6 +2,7 @@ interface Layout {
     uiAnchor: string;
     gaps: number;
     rounding: number;
+    borderAngle: number;
 }
 
 export class LayoutManager {

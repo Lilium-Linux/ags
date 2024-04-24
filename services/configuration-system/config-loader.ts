@@ -1,5 +1,9 @@
-//GET AND SET STATIC PALLITE JSON
+import { PaletteManager } from "./palette-manager";
+import { HyprlandManager } from "./hyprland-manager";
 
-class ConfigLoader{
-    static theme = JSON
+export class ConfigLoader{
+    public static async load() {
+        PaletteManager.loadPalette();
+        await HyprlandManager.updateHyprland();
+    }
 }
