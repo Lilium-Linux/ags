@@ -57,7 +57,8 @@ export class BarViewModel{
     }
 
     public static getLauncherButton(){
-        console.log(`Lilium logo: ${PaletteManager.Palette["$is-dark-theme"] ? model.liliumLogoLight : model.liliumLogoDark}`);
+        const lilimLogoPath = PaletteManager.Palette["$is-dark-theme"] ? model.liliumLogoLight : model.liliumLogoDark;
+        console.log(`Lilium logo: ${lilimLogoPath}`);
         console.log(`IsDarkTheme: ${PaletteManager.Palette["$is-dark-theme"]}`)
         return Widget.Button({
             class_name: "logo-button",
@@ -65,7 +66,7 @@ export class BarViewModel{
             child: Widget.Icon({
                 class_name: "logo-icon",
                 size: 30,
-                icon: PaletteManager.Palette["$is-dark-theme"] ? model.liliumLogoLight : model.liliumLogoDark,
+                icon: lilimLogoPath,
             }),
         })
     }
