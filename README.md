@@ -21,4 +21,3 @@ If you're interested in contributing to Lilium Shell or developing extensions fo
 
 ---
 
-Let me know if you need further adjustments!
