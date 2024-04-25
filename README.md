@@ -1,5 +1,5 @@
 ---
-<img src"./resources/images/lilium_logo_light.svg" alt="Lilium Linux Logo" width="200"/>
+![Alt Lilium Linux Logo](./resources/images/lilium_logo_light.svg =200x200)
 ---
 
 # Lilium Shell (Work in Progress)
