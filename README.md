@@ -1,5 +1,5 @@
 ---
-[Alt Lilium Linux Logo](./resources/images/lilium_logo_light.svg)
+![Alt Lilium Linux Logo](./resources/images/lilium_logo_light.svg)
 ---
 
 # Lilium Shell (Work in Progress)
