@@ -55,6 +55,7 @@ export class BarViewModel{
         });
     }
 
+    //TODO: MAKE APP LAUNCHER
     public static getLauncherButton(){
         return Widget.Button({
             class_name: "logo-button",
