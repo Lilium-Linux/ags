@@ -14,8 +14,8 @@ export class BarViewModel{
         return Widget.Box({
             class_name: "clock",
             children: [
+                dateLabel,
                 timeLabel,
-                dateLabel
             ]
         });
     }
