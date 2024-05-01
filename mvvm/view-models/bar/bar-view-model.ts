@@ -4,13 +4,13 @@ export class BarViewModel{
 
     public static getClock(){
         let timeLabel = Widget.Label();
-        timeLabel.class_name = "clock";
-        timeLabel.bind("label", model.time, "value");
         let dateLabel = Widget.Label();
-        dateLabel.class_name = "clock";
+
+        timeLabel.bind("label", model.time, "value");
         dateLabel.bind("label", model.date, "value");
 
         return Widget.Box({
+            class_name: "clock",
             children: [
                 timeLabel,
                 dateLabel
