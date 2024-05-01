@@ -6,7 +6,6 @@ export const hyprlandService = await Service.import("hyprland");
 export const date = Variable("", {poll: [1000, 'date "+%H:%M:%S %b %e"']})
 export const liliumLogoLight = `${IMAGES}/lilium_logo_light.svg`;
 export const liliumLogoDark = `${IMAGES}/lilium_logo_dark.svg`;
+export const getLiliumLogo = () =>
+    PaletteManager.Palette["$is-dark-theme"] ? `${IMAGES}/lilium_logo_light.svg` : `${IMAGES}/lilium_logo_dark.svg`;
 
-export function getLiliumLogo(isDarkTheme: boolean) {
-    return isDarkTheme.toString() == "true" ? `${IMAGES}/lilium_logo_light.svg` : `${IMAGES}/lilium_logo_dark.svg`;
-}
