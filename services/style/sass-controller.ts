@@ -5,7 +5,7 @@ export class SassController {
     private static paletteCompiled = `${App.configDir}/services/style/scss-globals/_palette.scss`;
 
 
-    //TODO--> MAKE GOOD STYLE MONITOR
+    //TODO--> MAKE GOOD STYLE MONITOR!
     public static LoadCss(){
         this.applyScss();
         Utils.monitorFile(this.css, this.applyScss);
