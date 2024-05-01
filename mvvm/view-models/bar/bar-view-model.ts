@@ -1,14 +1,21 @@
 import * as model from "../../models/bar/bar-model";
-import { PaletteManager } from "../../../services/configuration-system/palette-manager";
 
 export class BarViewModel{
 
     public static getClock(){
-        let labelWidget = Widget.Label();
-        labelWidget.class_name = "clock";
-        labelWidget.bind("label", model.date, "value");
+        let timeLabel = Widget.Label();
+        timeLabel.class_name = "clock";
+        timeLabel.bind("label", model.time, "value");
+        let dateLabel = Widget.Label();
+        dateLabel.class_name = "clock";
+        dateLabel.bind("label", model.date, "value");
 
-        return labelWidget;
+        return Widget.Box({
+            children: [
+                timeLabel,
+                dateLabel
+            ]
+        });
     }
 
     public static getWorkspaces(){
