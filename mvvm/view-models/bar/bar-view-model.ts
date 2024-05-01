@@ -8,6 +8,8 @@ export class BarViewModel{
 
         timeLabel.bind("label", model.time, "value");
         dateLabel.bind("label", model.date, "value");
+        timeLabel.class_name = "time";
+        dateLabel.class_name = "date";
 
         return Widget.Box({
             class_name: "clock",
