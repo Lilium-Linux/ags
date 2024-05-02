@@ -1,8 +1,10 @@
 @import "palette";
 
 
+
 //--> Global
 $global-bg: if($is-dark-theme, #000, $color-50);
+$lato-font: 'Lato';
 
 //BG
 $main-bg: if($is-dark-theme, $color-950, $color-200);
