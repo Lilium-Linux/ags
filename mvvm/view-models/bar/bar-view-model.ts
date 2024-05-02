@@ -43,7 +43,7 @@ export class BarViewModel{
 
                 const buttonProps = {
                     on_clicked: () => model.hyprlandService.messageAsync(`dispatch workspace ${id}`),
-                    label: ' ',
+                    label: '0',
                     class_name: activeWorkspaceId.as(activeId => `${activeId === id ? "workspace focused" : "workspace"}`),
                 };
 
