@@ -27,6 +27,7 @@ export class BarViewModel{
             class_name: "clock",
             children: [
                 dateButton,
+                Widget.Separator(),
                 timeLabel,
             ]
         });

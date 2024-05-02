@@ -7,8 +7,13 @@ box.bar{
 
 .date{
   font-size: 0.9rem;
-  //font-weight:;
   opacity: 0.7;
+
+  transition: color 0.3s;
+
+  &:hover{
+    color: $contrast-bg;
+  }
 }
 
 label.time{
@@ -22,8 +27,4 @@ label.time{
 
 .logo-icon{
   opacity: 0.5;
-}
-
-.clock{
-  //margin-right: 15px;
 }
