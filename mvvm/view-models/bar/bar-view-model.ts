@@ -1,6 +1,8 @@
 import * as model from "../../models/bar/bar-model";
 
 export class BarViewModel{
+
+    //TODO: MAKE CUSTOM CALENDAR WINDOW
     private static spawnCalendar(){
         const calendarWindow = Widget.Window({
             name: "calendar",
