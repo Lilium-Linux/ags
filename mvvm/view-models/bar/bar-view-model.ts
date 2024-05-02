@@ -14,19 +14,19 @@ export class BarViewModel{
 
     public static getClock(){
         let timeLabel = Widget.Label();
-        let dateLabel = Widget.Button();
+        let dateButton = Widget.Button();
 
         timeLabel.bind("label", model.time, "value");
-        dateLabel.bind("label", model.date, "value");
+        dateButton.bind("label", model.date, "value");
         timeLabel.class_name = "time";
-        dateLabel.class_name = "date";
-
-        dateLabel.on_clicked = this.spawnCalendar;
+        dateButton.class_name = "date";
+        dateButton.vpack = "center";
+        dateButton.on_clicked = this.spawnCalendar;
 
         return Widget.Box({
             class_name: "clock",
             children: [
-                dateLabel,
+                dateButton,
                 timeLabel,
             ]
         });
