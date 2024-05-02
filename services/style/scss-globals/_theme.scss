@@ -16,7 +16,7 @@ $corner-radius: $rounding;
 
 //TEXT
 $text: if($is-dark-theme, $color-50, $color-950); //$color-50;
-$secondary-text: if($is-dark-theme, $color-200, $color-900);//$color-600;
+$secondary-text: if($is-dark-theme, $color-300, $color-900);//$color-600;
 $disabled-text: if($is-dark-theme, $color-700, $color-400);//$color-700;
 $hyperlink-text: if($is-dark-theme, $color-400, $color-700);//$color-700;
 
