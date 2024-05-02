@@ -15,7 +15,7 @@ button.date {
   }
 
   &:hover label {
-    color: $hyperlink-text;
+    color: $contrast-bg;//$hyperlink-text;
     opacity: 1;
   }
 }
