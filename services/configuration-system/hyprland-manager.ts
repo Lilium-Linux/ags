@@ -7,7 +7,7 @@ export const hyprlandService = await Service.import("hyprland");
 export class HyprlandManager
 {
     public static async updateHyprland() {
-        const activeBorderColor = this.getByteColor(PaletteManager.Palette["$color-950"]);//this.getByteColor(PaletteManager.Palette["$color-600"]);
+        const activeBorderColor = this.getByteColor(PaletteManager.Palette["$color-50"]);
         const inactiveBorderColor = "0x00000000" //this.getByteColor(PaletteManager.Palette["$color-950"]);
         const borderSize = LayoutManager.layout.borderSize;
         const gapsIn = LayoutManager.layout.gaps + LayoutManager.layout.borderSize;
