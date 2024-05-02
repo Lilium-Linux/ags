@@ -5,19 +5,20 @@ box.bar{
   //border-radius: $corner-radius;
 }
 
-button.date{
+button.date {
   font-size: 0.9rem;
   opacity: 0.7;
   margin-right: 5px;
+
+  label {
+    transition: color 0.3s;
+  }
+
+  &:hover label {
+    color: $hyperlink-text;
+  }
 }
 
-button.date label{
-  transition: color 0.3s;
-}
-
-button.date:hover label{
-  color: $contrast-bg;
-}
 
 label.time{
   font-weight: bold;
