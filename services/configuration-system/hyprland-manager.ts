@@ -29,6 +29,6 @@ export class HyprlandManager
 
     private static getByteColor(hexColor: string){
         const rawValue = hexColor.slice(1);
-        return `0xff${rawValue}`;
+        return `0x80${rawValue}`;
     }
 }
