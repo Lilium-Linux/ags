@@ -1,7 +1,10 @@
 @import "theme";
 
+$lato-font = 'Lato';
+
 label{
   color: $text;
+  font-family: $lato-font;
 }
 
 window{
