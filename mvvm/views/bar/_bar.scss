@@ -11,11 +11,12 @@ button.date {
   margin-right: 5px;
 
   label {
-    transition: color 0.3s;
+    transition: color 0.3s, opacity 0.1s;
   }
 
   &:hover label {
     color: $hyperlink-text;
+    opacity: 1;
   }
 }
 
