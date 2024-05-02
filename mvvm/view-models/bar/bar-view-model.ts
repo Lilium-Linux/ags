@@ -1,15 +1,28 @@
 import * as model from "../../models/bar/bar-model";
 
 export class BarViewModel{
+    private static spawnCalendar(){
+        const calendarWindow = Widget.Window({
+            name: "calendar",
+            child: Widget.Calendar(),
+        });
+
+
+        if (!App.getWindow("calendar")){
+            App.addWindow(calendarWindow);
+        }
+    };
 
     public static getClock(){
         let timeLabel = Widget.Label();
-        let dateLabel = Widget.Label();
+        let dateLabel = Widget.Button();
 
         timeLabel.bind("label", model.time, "value");
         dateLabel.bind("label", model.date, "value");
         timeLabel.class_name = "time";
         dateLabel.class_name = "date";
+
+        dateLabel.on_clicked = this.spawnCalendar;
 
         return Widget.Box({
             class_name: "clock",
