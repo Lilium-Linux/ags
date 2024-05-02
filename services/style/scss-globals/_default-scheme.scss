@@ -3,7 +3,6 @@
 label{
   color: $text;
   font-family: $lato-font;
-  font-weight: bold;
 }
 
 window{
@@ -12,6 +11,6 @@ window{
   border-radius: $corner-radius;
 }
 
-window > * {
+window, box, center > * {
   margin: 0 5px 0 5px;
 }
