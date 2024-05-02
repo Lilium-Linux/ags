@@ -7,7 +7,6 @@ export class BarViewModel{
             child: Widget.Calendar(),
         });
 
-
         if (!App.getWindow("calendar")){
             App.addWindow(calendarWindow);
         }

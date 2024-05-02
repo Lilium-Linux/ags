@@ -6,5 +6,10 @@ label{
 
 window{
   background-color: $global-bg;
+  margin: 0 5px 0 5px;
   border-radius: $corner-radius;
+}
+
+window > * {
+  margin: 0 5px 0 5px;
 }
