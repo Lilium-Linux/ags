@@ -13,9 +13,10 @@ button.date{
 
 button.date label{
   transition: color 0.3s;
-  &:hover{
-    color: $contrast-bg;
-  }
+}
+
+button.date:hover label{
+  color: $contrast-bg;
 }
 
 label.time{
