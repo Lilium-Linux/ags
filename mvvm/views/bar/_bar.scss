@@ -5,6 +5,7 @@ box.bar{
   //border-radius: $corner-radius;
 }
 
+//Clock
 button.date {
   font-size: 0.9rem;
   opacity: 0.7;
@@ -19,17 +20,32 @@ button.date {
     opacity: 1;
   }
 }
-
-
 label.time{
   font-weight: bold;
 }
 
+//Workspaces
+
+.workspace{
+  min-height: 5px;
+  min-width: 5px;
+  background-color: $flat-button-disabled;
+}
+
+.workspace .focused{
+  min-width: 10px;
+  background-color: $flat-button-active;
+}
+
+box.workspace-box > * {
+  margin: 0 5px 0 5px;
+}
+
+//Launcher button
 .logo-button{
   min-width: 45px;
   min-height: 45px;
 }
-
 .logo-icon{
   opacity: 0.8;
 }
