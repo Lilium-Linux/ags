@@ -8,11 +8,10 @@ box.bar{
 .date{
   font-size: 0.9rem;
   opacity: 0.7;
-
-  transition: background-color 0.3s;
+  transition: color 0.3s;
 
   &:hover{
-    background-color: $contrast-bg;
+    color: $contrast-bg;
   }
 }
 
