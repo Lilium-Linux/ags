@@ -4,6 +4,13 @@ interface Layout {
     rounding: number;
     borderAngle: number;
     borderSize: number;
+    barStyle: BarStyle
+}
+
+enum BarStyle {
+    RoundedCorners = "RoundedCorners",
+    Floating = "Floating",
+    Fill = "Fill",
 }
 
 export class LayoutManager {
@@ -11,6 +18,7 @@ export class LayoutManager {
     public static rawJson: string = Utils.readFile(this.jsonFilePath);
     public static layout: Layout = JSON.parse(this.rawJson.toString());
     public static getAnchor() : ("bottom" | "left" | "right" | "top" )[] {
+        console.log(this.layout.barStyle);
         switch(this.layout.uiAnchor) {
             case 'bottom':
                 return ['bottom', 'left', 'right'];
