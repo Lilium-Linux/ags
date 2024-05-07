@@ -32,7 +32,7 @@ export class BarView {
     }
 
     //
-    public static default (monitor = 0){
+    public static default (monitor: number){
         return Widget.Window({
             monitor,
             name: `bar${monitor}`,
