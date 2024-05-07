@@ -36,8 +36,9 @@ export class LayoutManager {
     {
         const doubleGaps = this.layout.gaps * 2;
 
-        if (this.layout.barStyle == BarStyle.Fill)
-            return [0,0,0,0];
+        if (this.layout.barStyle == BarStyle.Fill ||
+            this.layout.barStyle == BarStyle.RoundedCorners)
+            return undefined;//[0,0,0,0];
 
         switch (this.layout.uiAnchor)
         {
