@@ -31,6 +31,24 @@ export class BarView {
         })
     }
 
+    //
+    public static default (monitor = 0){
+        return Widget.Window({
+            monitor,
+            name: `bar${monitor}`,
+            class_name: 'bar',
+            anchor: LayoutManager.getAnchor(),
+            margins: LayoutManager.getMenuMargins(), //[20, 20, 0, 20],
+            exclusivity: "exclusive",
+            child: Widget.CenterBox({
+                class_name: "bar",
+                start_widget: this.Left(),
+                center_widget: this.Center(),
+                end_widget: this.Right()
+            })
+        })
+    }
+    //
     public static BuildBar(monitor = 0) : Gtk.Window{
         return Widget.Window({
             monitor,

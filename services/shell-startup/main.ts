@@ -19,6 +19,6 @@ App.config({
     gtkTheme: GLib.getenv("GTK_THEME")!,
     cursorTheme: GLib.getenv("XCURSOR_THEME")!,
     windows: [
-        ...MonitorManager.spawnOnMonitors(BarView.BuildBar),
+        ...MonitorManager.spawnOnMonitors(BarView.default),
     ]
 })
