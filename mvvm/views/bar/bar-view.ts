@@ -1,5 +1,6 @@
 import {BarViewModel} from "../../view-models/bar/bar-view-model";
 import { LayoutManager } from "../../../services/layout-manager/LayoutManager";
+import Gtk from "@girs/gtk-3.0";
 
 export class BarView {
     private static Left(){
@@ -30,7 +31,7 @@ export class BarView {
         })
     }
 
-    public static BuildBar(monitor = 0){
+    public static BuildBar(monitor = 0) : Gtk.Window{
         return Widget.Window({
             monitor,
             name: `bar${monitor}`,
