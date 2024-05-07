@@ -4,5 +4,5 @@
   "rounding": 20,
   "borderAngle": 45,
   "borderSize": 3,
-  "barStyle": "Floating"
+  "barStyle": "Fill"
 }

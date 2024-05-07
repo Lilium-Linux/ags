@@ -18,7 +18,6 @@ export class LayoutManager {
     public static rawJson: string = Utils.readFile(this.jsonFilePath);
     public static layout: Layout = JSON.parse(this.rawJson.toString());
     public static getAnchor() : ("bottom" | "left" | "right" | "top" )[] {
-        console.log(this.layout.barStyle);
         switch(this.layout.uiAnchor) {
             case 'bottom':
                 return ['bottom', 'left', 'right'];
@@ -36,6 +35,9 @@ export class LayoutManager {
     static getMenuMargins() :  number[]  | undefined
     {
         const doubleGaps = this.layout.gaps * 2;
+
+        if (this.layout.barStyle == BarStyle.Fill)
+            return [0,0,0,0];
 
         switch (this.layout.uiAnchor)
         {
