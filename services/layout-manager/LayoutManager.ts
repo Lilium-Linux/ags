@@ -32,14 +32,12 @@ export class LayoutManager {
         }
     }
 
-    static getMenuMargins() :  number[]  | undefined
-    {
-        const doubleGaps = this.layout.gaps * 2;
-
+    static getMenuMargins() : number[] | undefined {
         if (this.layout.barStyle == BarStyle.Fill ||
             this.layout.barStyle == BarStyle.RoundedCorners)
-            return undefined;//[0,0,0,0];
+            return undefined;
 
+        const doubleGaps = this.layout.gaps * 2;
         switch (this.layout.uiAnchor)
         {
             case 'bottom':

@@ -1,6 +1,6 @@
 {
   "$is-dark-theme": true,
-  "$rounding": "20px",
+  "$rounding": "10px",
   "$color-50": "#fcf6fd",
   "$color-100": "#f9ebfc",
   "$color-200": "#f2d7f7",
