@@ -1,4 +1,4 @@
-import Gdk from "@girs/gdk-3.0";
+import Gdk from "gi://Gdk";
 import Gtk from "@girs/gtk-3.0";
 
 export class MonitorManager {
