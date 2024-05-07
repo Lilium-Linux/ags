@@ -1,7 +1,6 @@
 interface Layout {
     uiAnchor: string;
     gaps: number;
-    rounding: number;
     borderAngle: number;
     borderSize: number;
     barStyle: BarStyle
