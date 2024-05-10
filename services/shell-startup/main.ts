@@ -6,13 +6,7 @@ import { PaletteManager } from "../configuration-system/palette-manager";
 import { ConfigLoader } from "../configuration-system/config-loader";
 import { MonitorManager } from "../layout-manager/MonitorManager";
 
-
-const content = Utils.readFile(`${App.configDir}/services/style/palettes/Default.json`);
-const data = JSON.parse(content.toString());
-
-
 await ConfigLoader.load();
-
 
 App.config({
     style: styleController.SassController.LoadCss(),
