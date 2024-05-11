@@ -6,11 +6,11 @@ function range(start: number, end: number): number[] {
 }
 
 export class MonitorManager {
-    public static spawnOnMonitors(widget: (monitor: number) => Gtk.Window) {
+    public static spawnOnMonitors(widget: (monitor: number) => Gtk.Window) : Gtk.Window[] {
         console.log("Looking for monitors...");
         const n = Gdk.Display.get_default()?.get_n_monitors() || 1;
         console.log(`Monitors count: ${n}`);
-        return range(1, n).flatMap(widget);
+        return range(0, n).flatMap(widget);
     }
 
     // private static range(length: number, start = 1) {
