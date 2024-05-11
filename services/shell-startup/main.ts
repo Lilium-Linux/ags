@@ -5,6 +5,7 @@ import * as styleController from "services/style/sass-controller"
 import { PaletteManager } from "../configuration-system/palette-manager";
 import { ConfigLoader } from "../configuration-system/config-loader";
 import { MonitorManager } from "../layout-manager/MonitorManager";
+import { GlobalWidget } from "../../Contracts/Widgets/GlobalWidget";
 
 await ConfigLoader.load();
 
@@ -13,6 +14,6 @@ App.config({
     gtkTheme: GLib.getenv("GTK_THEME")!,
     cursorTheme: GLib.getenv("XCURSOR_THEME")!,
     windows: [
-        ...MonitorManager.spawnOnMonitors(BarView.default),
+        ...GlobalWidget.getWindowsForMonitors(new BarView()),
     ]
 })
