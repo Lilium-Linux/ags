@@ -2,6 +2,7 @@ import Gdk from "gi://Gdk";
 import Gtk from "@girs/gtk-3.0";
 
 export function range(length: number, start = 1) {
+    console.log("range() called");
     return Array.from({ length }, (_, i) => i + start)
 }
 
