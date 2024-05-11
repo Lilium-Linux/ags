@@ -7,7 +7,9 @@ export function range(length: number, start = 1) {
 
 export class MonitorManager {
     public static spawnOnMonitors(widget: (monitor: number) => Gtk.Window) {
-        const n = Gdk.Display.get_default()?.get_n_monitors() || 1
+        console.log("Looking for monitors...");
+        const n = Gdk.Display.get_default()?.get_n_monitors() || 1;
+        console.log(`Monitors count: ${n}`);
         return range(n, 0).flatMap(widget);
     }
 
