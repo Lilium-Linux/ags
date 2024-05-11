@@ -78,6 +78,8 @@ export class BarViewModel{
         });
     }
 
+    public static getBarStyleClass = () => model.barStyleClass();
+
     //TODO: MAKE APP LAUNCHER
     public static getLauncherButton(){
         return Widget.Button({

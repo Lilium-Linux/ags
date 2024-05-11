@@ -6,7 +6,7 @@ interface Layout {
     barStyle: BarStyle
 }
 
-enum BarStyle {
+export enum BarStyle {
     RoundedCorners = "RoundedCorners",
     Floating = "Floating",
     Fill = "Fill",

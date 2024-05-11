@@ -1,8 +1,11 @@
 @import "../../../services/style/scss-globals/theme";
 
 .bar{
-  //background-color: $main-bg;
   border-radius: 0;
+}
+
+.barRounded{
+  border-radius: $rounding;
 }
 
 //Clock

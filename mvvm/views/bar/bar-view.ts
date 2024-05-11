@@ -29,39 +29,6 @@ export class BarView extends GlobalWidget{
             ],
         })
     }
-    protected static default (monitor: number){
-        return Widget.Window({
-            monitor,
-            name: `bar${monitor}`,
-            class_name: 'bar',
-            anchor: LayoutManager.getAnchor(),
-            margins: LayoutManager.getMenuMargins(), //[20, 20, 0, 20],
-            exclusivity: "exclusive",
-            child: Widget.CenterBox({
-                class_name: "bar",
-                start_widget: this.Left(),
-                center_widget: this.Center(),
-                end_widget: this.Right()
-            })
-        })
-    }
-    public static BuildBar(monitor = 0) : Gtk.Window{
-        return Widget.Window({
-            monitor,
-            name: `bar${monitor}`,
-            class_name: 'bar',
-            anchor: LayoutManager.getAnchor(),
-            margins: LayoutManager.getMenuMargins(), //[20, 20, 0, 20],
-            exclusivity: "exclusive",
-            child: Widget.CenterBox({
-                class_name: "bar",
-                start_widget: this.Left(),
-                center_widget: this.Center(),
-                end_widget: this.Right()
-            })
-        })
-    }
-
     buildWindow(monitor: number): Gtk.Window {
         return Widget.Window({
             monitor,
@@ -71,7 +38,7 @@ export class BarView extends GlobalWidget{
             margins: LayoutManager.getMenuMargins(), //[20, 20, 0, 20],
             exclusivity: "exclusive",
             child: Widget.CenterBox({
-                class_name: "bar",
+                class_name: BarViewModel.getBarStyleClass(),
                 start_widget: BarView.Left(),
                 center_widget: BarView.Center(),
                 end_widget: BarView.Right()
