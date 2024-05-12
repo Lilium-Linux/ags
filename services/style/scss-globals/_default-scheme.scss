@@ -23,15 +23,18 @@ menu {
 menuitem {
   border-radius: $corner-radius;
   padding: 5px 10px;
-  color: $color-950;
+  color: $flat-button-disabled;
+  opacity: 0.7;
+
+  transition: opacity 0.1s ease;
 }
 
 menuitem:checked {
-  background-color: $main-bg;
+  background-color: $contrast-bg;
   color: $text;
 }
 
 menuitem:hover {
-  background-color: $color-900;
-  color: $hyperlink-text;
+  background-color: $main-bg;
+  color: $text;
 }
