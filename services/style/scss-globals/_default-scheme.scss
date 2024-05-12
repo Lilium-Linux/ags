@@ -15,21 +15,23 @@ window, box, center > * {
 }
 
 menu {
+  border-radius: $corner-radius;
   background-color: $global-bg;
   padding: 5px;
 }
 
-menuitem{
+menuitem {
+  border-radius: $corner-radius;
   padding: 5px 10px;
   color: $color-950;
 }
 
-menuitem:checked{
+menuitem:checked {
   background-color: $main-bg;
   color: $text;
 }
 
-menuitem:hover{
+menuitem:hover {
   background-color: $color-900;
   color: $hyperlink-text;
 }
