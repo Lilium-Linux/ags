@@ -78,7 +78,12 @@ export class BarViewModel{
         });
     }
 
-    public static getBarStyleClass = () => model.barStyleClass();
+    public static getBarStyleClass() {
+        const scssClass = model.barStyleClass();
+        console.log(`Current bar style: ${model.layout.barStyle}`)
+        console.log(`SCSS Class: ${scssClass}`)
+        return scssClass;
+    }
 
     //TODO: MAKE APP LAUNCHER
     public static getLauncherButton(){
