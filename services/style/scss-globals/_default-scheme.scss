@@ -25,6 +25,11 @@ menuitem {
   padding: 5px 10px;
   color: $flat-button-disabled;
   transition: color 0.1s ease;
+
+  &:hover{
+    background-color: $main-bg;
+    color: $text;
+  }
 }
 
 menuitem:checked {
@@ -32,7 +37,3 @@ menuitem:checked {
   color: $text;
 }
 
-menuitem:hover {
-  background-color: $main-bg;
-  color: $text;
-}
