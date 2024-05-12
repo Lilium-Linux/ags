@@ -33,7 +33,7 @@ export class BarView extends GlobalWidget{
         return Widget.Window({
             monitor,
             name: `bar${monitor}`,
-            class_name: 'bar',
+            class_name: BarViewModel.getBarStyleClass(),
             anchor: LayoutManager.getAnchor(),
             margins: LayoutManager.getMenuMargins(), //[20, 20, 0, 20],
             exclusivity: "exclusive",
