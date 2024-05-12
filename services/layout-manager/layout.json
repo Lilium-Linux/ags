@@ -3,5 +3,5 @@
   "gaps": 10,
   "borderAngle": 45,
   "borderSize": 3,
-  "barStyle": "RoundedCorners"
+  "barStyle": "Floating"
 }
