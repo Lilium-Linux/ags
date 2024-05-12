@@ -2,6 +2,7 @@ import {BarViewModel} from "../../view-models/bar/bar-view-model";
 import { LayoutManager } from "../../../services/layout-manager/LayoutManager";
 import { GlobalWidget } from "../../../Contracts/Widgets/GlobalWidget";
 import Gtk from "@girs/gtk-3.0";
+import { Battery } from "../../../types/service/battery";
 
 export class BarView extends GlobalWidget{
     protected static Left(){
@@ -25,6 +26,7 @@ export class BarView extends GlobalWidget{
             hpack: "end",
             spacing: 8,
             children: [
+                BarViewModel.getSystemTray(),
                 BarViewModel.getClock()
             ],
         })
