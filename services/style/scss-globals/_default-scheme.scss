@@ -13,3 +13,23 @@ window{
 window, box, center > * {
   margin: 0 5px 0 5px;
 }
+
+menu {
+  background-color: $global-bg;
+  padding: 5px;
+}
+
+menuitem{
+  padding: 5px 10px;
+  color: $color-950;
+}
+
+menuitem:checked{
+  background-color: $main-bg;
+  color: $text;
+}
+
+menuitem:hover{
+  background-color: $color-900;
+  color: $hyperlink-text;
+}
