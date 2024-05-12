@@ -7,7 +7,6 @@ interface Layout {
 }
 
 export enum BarStyle {
-    RoundedCorners = "RoundedCorners",
     Floating = "Floating",
     Fill = "Fill",
 }
@@ -32,8 +31,7 @@ export class LayoutManager {
     }
 
     static getMenuMargins() : number[] | undefined {
-        if (this.layout.barStyle == BarStyle.Fill ||
-            this.layout.barStyle == BarStyle.RoundedCorners)
+        if (this.layout.barStyle == BarStyle.Fill)
             return undefined;
 
         const doubleGaps = this.layout.gaps * 2;
