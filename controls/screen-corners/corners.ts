@@ -29,7 +29,8 @@ export class Corners extends GlobalWidget{
         })
 
         return Widget.Window({
-           child: Widget.DrawingArea({
+            monitor,
+            child: Widget.DrawingArea({
                class_name: "screen-corners",
                child: drawingArea
            })
