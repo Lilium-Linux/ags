@@ -26,11 +26,10 @@ export class Corners extends GlobalWidget{
             },
         })
 
-        let window = Widget.Window({
+        return Widget.Window({
             monitor,
+            class_name: "unset",
             child: drawingArea,
         });
-        window.setCss("");
-        return window;
     }
 }
