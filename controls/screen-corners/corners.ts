@@ -12,6 +12,8 @@ export class Corners extends GlobalWidget{
         const drawingArea = Widget.DrawingArea({
             widthRequest: 50,
             heightRequest: 50,
+            hpack: 'start',
+            vpack: 'end',
             drawFn: (self, cr, w, h) =>
             {
                 const center = {
