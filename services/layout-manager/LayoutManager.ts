@@ -1,13 +1,21 @@
 interface Layout {
-    uiAnchor: string;
+    uiAnchor: Anchor;
     gaps: number;
     borderAngle: number;
     borderSize: number;
     barStyle: BarStyle
 }
 
+export enum Anchor{
+    Top = "top",
+    Bottom = "bottom",
+    Left = "left",
+    Right = "right",
+}
+
 export enum BarStyle {
     Floating = "Floating",
+    Corners = "Corners",
     Fill = "Fill",
 }
 
@@ -17,13 +25,13 @@ export class LayoutManager {
     public static layout: Layout = JSON.parse(this.rawJson.toString());
     public static getAnchor() : ("bottom" | "left" | "right" | "top" )[] {
         switch(this.layout.uiAnchor) {
-            case 'bottom':
+            case Anchor.Bottom:
                 return ['bottom', 'left', 'right'];
-            case 'top':
+            case Anchor.Top:
                 return ['top', 'left', 'right'];
-            case 'left':
+            case Anchor.Left:
                 return ['left', 'top', 'bottom'];
-            case 'right':
+            case Anchor.Right:
                 return ['right', 'top', 'bottom'];
             default:
                 return ['bottom', 'left', 'right'];
@@ -31,7 +39,7 @@ export class LayoutManager {
     }
 
     static getMenuMargins() : number[] | undefined {
-        if (this.layout.barStyle == BarStyle.Fill)
+        if (this.layout.barStyle == BarStyle.Fill || this.layout.barStyle == BarStyle.Corners)
             return undefined;
 
         const doubleGaps = this.layout.gaps * 2;
