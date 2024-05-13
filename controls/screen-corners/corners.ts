@@ -28,7 +28,10 @@ export class Corners extends GlobalWidget{
 
         return Widget.Window({
             monitor,
+            anchor: 'bottomleft',
             class_name: "unset",
+            exclusivity: 'ignore',
+            visible: true,
             child: drawingArea,
         });
     }
