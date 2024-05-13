@@ -18,10 +18,10 @@ export class Corners extends GlobalWidget{
                     x: w / 2,
                     y: h / 2,
                 };
+
                 cr.setSourceRGBA(1, 1, 1, 1)
-                cr.setLineWidth(8)
-                cr.arc(center.x, center.y, 2, 0, Math.PI * 2)
-                cr.stroke()
+                cr.draw_rectangle(50, 50, 100, 100);
+                cr.stroke();
             },
         })
 
