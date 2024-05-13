@@ -27,6 +27,8 @@ export class Corners extends GlobalWidget{
 
         return Widget.Window({
             monitor,
+            default_height: 500,
+            default_width: 500,
             child: drawingArea,
         });
     }
