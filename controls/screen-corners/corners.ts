@@ -1,6 +1,4 @@
-/*
-*   NOTE! I use ts-nocheck because Cairo is not an introspectable lib
-*/
+// NOTE! I use ts-nocheck because Cairo is not an introspectable lib
 
 // @ts-nocheck
 
@@ -15,7 +13,6 @@ export class Corners extends GlobalWidget{
             widthRequest: 50,
             heightRequest: 50,
             drawFn: (self, cr, w, h) =>
-            // @ts-ignore
             {
                 const center = {
                     x: w / 2,
@@ -30,10 +27,7 @@ export class Corners extends GlobalWidget{
 
         return Widget.Window({
             monitor,
-            child: Widget.DrawingArea({
-               class_name: "screen-corners",
-               child: drawingArea
-           })
+            child: drawingArea,
         });
     }
 }
