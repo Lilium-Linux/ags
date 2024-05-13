@@ -28,7 +28,7 @@ export class Corners extends GlobalWidget{
 
         return Widget.Window({
             monitor,
-            anchor: 'bottomleft',
+            anchor: 'bottom left'.split(' '),
             class_name: "unset",
             exclusivity: 'ignore',
             visible: true,
