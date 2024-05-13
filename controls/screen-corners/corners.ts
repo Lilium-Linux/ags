@@ -19,7 +19,7 @@ export class Corners extends GlobalWidget{
                     y: h / 2,
                 };
 
-                cr.setSourceRGBA(1, 1, 1, 1)
+                cr.setSourceRGBA(255, 0, 0, 1)
                 cr.draw_rectangle(50, 50, 100, 100);
                 cr.stroke();
             },
