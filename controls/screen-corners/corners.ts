@@ -19,17 +19,18 @@ export class Corners extends GlobalWidget{
                     y: h / 2,
                 };
 
-                cr.setSourceRGBA(255, 0, 0, 1)
-                cr.draw_rectangle(50, 50, 100, 100);
-                cr.stroke();
+                cr.setSourceRGBA(1, 1, 1, 1)
+                cr.setLineWidth(8)
+                cr.arc(center.x, center.y, 2, 0, Math.PI * 2)
+                cr.stroke()
             },
         })
 
-        return Widget.Window({
+        let window = Widget.Window({
             monitor,
-            default_height: 500,
-            default_width: 500,
             child: drawingArea,
         });
+        window.setCss("");
+        return window;
     }
 }
