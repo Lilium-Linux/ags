@@ -5,7 +5,9 @@
 //import { Anchor, LayoutManager } from "../../services/layout-manager/LayoutManager";
 import { GlobalWidget } from "../../Contracts/Widgets/GlobalWidget";
 import Gtk from "@girs/gtk-3.0/gtk-3.0";
-import Gdk from "@girs/gdk-3.0";
+import Cairo from "../../types/@girs/gjs/cairo";
+
+//import Gdk from "@girs/gdk-3.0";
 
 export class Corners extends GlobalWidget{
     buildWindow(monitor: number): Gtk.Window
@@ -29,7 +31,7 @@ export class Corners extends GlobalWidget{
             },
         })
 
-        let window = Widget.Window({
+        return Widget.Window({
             monitor,
             name: `corner${monitor}`,
             anchor: 'bottom left'.split(' '),
@@ -37,12 +39,7 @@ export class Corners extends GlobalWidget{
             exclusivity: 'ignore',
             visible: true,
             child: drawingArea,
+            setup: (self) => self.input_shape_combine_region(new Cairo.Region()),
         });
-
-        window.set_type_hint(Gdk.WindowTypeHint.DOCK);
-        window.set_skip_taskbar_hint(true);
-        window.set_skip_pager_hint(true);
-
-        return window;
     }
 }
