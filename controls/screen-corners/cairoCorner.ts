@@ -16,13 +16,14 @@ export class CairoCorner{
     public getWindow(parent: Gtk.Window, monitor: number, position: CornerPosition): Gtk.Window
     {
         const radius = PaletteManager.getRounding();
+        const color = widget.get_style_context().get_property('background-color', Gtk.StateFlags.NORMAL);
         const drawingArea = Widget.DrawingArea({
             widthRequest: radius,
             heightRequest: radius,
             hpack: 'start',
             vpack: 'end',
             drawFn: (self, cr, w, h) => {
-                cr.setSourceRGBA(1, 0, 0, 1)
+                cr.setSourceRGBA(color.red, color.green, color.blue, color.alpha)
                 cr.arc(radius,0, radius, Math.PI / 2, Math.PI);
                 cr.lineTo(0, radius);
                 cr.fill();
