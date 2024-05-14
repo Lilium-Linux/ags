@@ -1,10 +1,11 @@
 // NOTE! I use ts-nocheck because Cairo is not an introspectable lib
-// ts-nocheck
+// @ts-nocheck
 
 //import { Anchor, LayoutManager } from "../../services/layout-manager/LayoutManager";
 import { GlobalWidget } from "../../Contracts/Widgets/GlobalWidget";
 import Gtk from "@girs/gtk-3.0/gtk-3.0";
 import cairo from "@girs/cairo-1.0";
+import Cairo from 'gi://cairo?version=1.0';
 
 export class Corners extends GlobalWidget{
     buildWindow(monitor: number): Gtk.Window
