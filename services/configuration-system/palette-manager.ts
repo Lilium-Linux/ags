@@ -39,6 +39,10 @@ export class PaletteManager {
         this.writeSCSS();
     }
 
+    public static getRounding(){
+        return Number(this.Palette.$rounding.replace("px", ""));
+    }
+
     private static writeSCSS(){
         console.log("Writing to _palette.scss...");
         const filePath = `${App.configDir}/services/style/scss-globals/_palette.scss`;

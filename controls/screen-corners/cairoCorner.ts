@@ -1,37 +1,32 @@
 // NOTE! I use ts-nocheck because Cairo is not an introspectable lib
 // @ts-nocheck
-
-//import { Anchor, LayoutManager } from "../../services/layout-manager/LayoutManager";
 import { GlobalWidget } from "../../Contracts/Widgets/GlobalWidget";
 import Gtk from "@girs/gtk-3.0/gtk-3.0";
-import cairo from "@girs/cairo-1.0";
-import Cairo from 'gi://cairo?version=1.0';
 import cairo10 from "../../types/@girs/cairo-1.0/cairo-1.0";
+import { PaletteManager } from "../../services/configuration-system/palette-manager";
 
-export class Corners extends GlobalWidget{
-    buildWindow(monitor: number): Gtk.Window
+export enum CornerPosition {
+    TopLeft,
+    TopRight,
+    BottomLeft,
+    BottomRight,
+}
+
+export class CairoCorner{
+    public getWindow(monitor: number, position: CornerPosition, parent: Gtk.Window): Gtk.Window
     {
-        const r = 20;
+        const radius = PaletteManager.getRounding();
+
+
         const drawingArea = Widget.DrawingArea({
-            widthRequest: r,
-            heightRequest: r,
+            widthRequest: radius,
+            heightRequest: radius,
             hpack: 'start',
             vpack: 'end',
-            drawFn: (self, cr, w, h) =>
-            {
-                const center = {
-                    x: w / 2,
-                    y: h / 2,
-                };
-
-                // const r = 20;
-                //
-                // cr.arc(r, 0, r, Math.PI / 2, Math.PI);
-                // cr.lineTo(0, r);
+            drawFn: (self, cr, w, h) => {
                 cr.setSourceRGBA(1, 0, 0, 1)
-                //cr.setLineWidth(8)
-                cr.arc(r,0, r, Math.PI / 2, Math.PI);
-                cr.lineTo(0, r);
+                cr.arc(radius,0, radius, Math.PI / 2, Math.PI);
+                cr.lineTo(0, radius);
                 cr.fill();
             },
         })

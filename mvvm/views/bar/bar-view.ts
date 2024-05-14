@@ -1,8 +1,8 @@
-import {BarViewModel} from "../../view-models/bar/bar-view-model";
+import { BarViewModel } from "../../view-models/bar/bar-view-model";
 import { LayoutManager } from "../../../services/layout-manager/LayoutManager";
 import { GlobalWidget } from "../../../Contracts/Widgets/GlobalWidget";
 import Gtk from "@girs/gtk-3.0";
-import { Battery } from "../../../types/service/battery";
+import { CairoCorner, CornerPosition } from "../../../controls/screen-corners/cairoCorner";
 
 export class BarView extends GlobalWidget{
     protected static Left(){
@@ -32,7 +32,7 @@ export class BarView extends GlobalWidget{
         })
     }
     buildWindow(monitor: number): Gtk.Window {
-        return Widget.Window({
+        let window = Widget.Window({
             monitor,
             name: `bar${monitor}`,
             class_name: BarViewModel.getBarStyleClass(),
@@ -45,6 +45,14 @@ export class BarView extends GlobalWidget{
                 center_widget: BarView.Center(),
                 end_widget: BarView.Right()
             })
-        })
+        });
+
+        this.addCorners(window, monitor);
+        return window
+    }
+
+    private addCorners(parent: Gtk.Window, monitor: number) {
+        const corner = new CairoCorner().getWindow(monitor, CornerPosition.BottomLeft, parent);
+        App.addWindow(corner);
     }
 }
