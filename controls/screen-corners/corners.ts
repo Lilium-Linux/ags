@@ -5,6 +5,7 @@
 //import { Anchor, LayoutManager } from "../../services/layout-manager/LayoutManager";
 import { GlobalWidget } from "../../Contracts/Widgets/GlobalWidget";
 import Gtk from "@girs/gtk-3.0/gtk-3.0";
+import Gdk from "@girs/gdk-3.0";
 
 export class Corners extends GlobalWidget{
     buildWindow(monitor: number): Gtk.Window
