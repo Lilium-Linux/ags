@@ -12,8 +12,8 @@ export class Corners extends GlobalWidget{
     buildWindow(monitor: number): Gtk.Window
     {
         const drawingArea = Widget.DrawingArea({
-            widthRequest: 50,
-            heightRequest: 50,
+            widthRequest: 300,
+            heightRequest: 300,
             hpack: 'start',
             vpack: 'end',
             drawFn: (self, cr, w, h) =>
@@ -23,9 +23,10 @@ export class Corners extends GlobalWidget{
                     y: h / 2,
                 };
 
-                cr.setSourceRGBA(1, 0, 0, 1)
-                cr.setLineWidth(8)
-                cr.arc(center.x, center.y, 3, 0, Math.PI * 2)
+                const r = 20;
+
+                cr.arc(r, 0, r, Math.PI / 2, Math.PI);
+                cr.lineTo(0, r);
                 cr.stroke()
             },
         })
