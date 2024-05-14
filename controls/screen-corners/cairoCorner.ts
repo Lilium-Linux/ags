@@ -6,10 +6,10 @@ import cairo10 from "../../types/@girs/cairo-1.0/cairo-1.0";
 import { PaletteManager } from "../../services/configuration-system/palette-manager";
 
 export enum CornerPosition {
-    TopLeft,
-    TopRight,
-    BottomLeft,
-    BottomRight,
+    TopLeft = "TopLeft",
+    TopRight = "TopRight",
+    BottomLeft = "BottomLeft",
+    BottomRight = "BottomRight",
 }
 
 export class CairoCorner{
@@ -31,7 +31,7 @@ export class CairoCorner{
 
         return Widget.Window({
             monitor,
-            name: `corner${monitor}`,
+            name: `corner${position + monitor}`,
             anchor: 'bottom left'.split(' '),
             class_name: "unset",
             exclusivity: 'normal',
