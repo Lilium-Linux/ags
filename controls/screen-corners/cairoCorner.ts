@@ -1,7 +1,8 @@
 // NOTE! I use ts-nocheck because Cairo is not an introspectable lib
 // @ts-nocheck
 import { GlobalWidget } from "../../Contracts/Widgets/GlobalWidget";
-import Gtk from "@girs/gtk-3.0/gtk-3.0";
+//import Gtk from "@girs/gtk-3.0/gtk-3.0";
+import Gtk from "../../types/@girs/gtk-3.0";
 import cairo10 from "../../types/@girs/cairo-1.0/cairo-1.0";
 import { PaletteManager } from "../../services/configuration-system/palette-manager";
 
