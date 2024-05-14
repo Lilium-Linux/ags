@@ -39,15 +39,19 @@ export class BarView extends GlobalWidget{
             anchor: LayoutManager.getAnchor(),
             margins: LayoutManager.getMenuMargins(), //[20, 20, 0, 20],
             exclusivity: "exclusive",
+            setup: (self) => {
+                const corner = new CairoCorner().getWindow(monitor, CornerPosition.BottomLeft, self);
+                App.addWindow(corner);
+            },
             child: Widget.CenterBox({
                 class_name: BarViewModel.getBarStyleClass(),
                 start_widget: BarView.Left(),
                 center_widget: BarView.Center(),
                 end_widget: BarView.Right()
-            })
+            }),
         });
 
-        this.addCorners(window, monitor);
+        //this.addCorners(window, monitor);
         return window
     }
 
