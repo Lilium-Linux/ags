@@ -43,6 +43,17 @@ export class PaletteManager {
         return Number(this.Palette.$rounding.replace("px", ""));
     }
 
+    public static hexToRgb(hex: string): { r: number; g: number; b: number } | null {
+        hex = hex.replace(/^#/, '');
+
+        const bigint = parseInt(hex, 16);
+        const r = (bigint >> 16) & 255;
+        const g = (bigint >> 8) & 255;
+        const b = bigint & 255;
+
+        return { r, g, b };
+    }
+
     private static writeSCSS(){
         console.log("Writing to _palette.scss...");
         const filePath = `${App.configDir}/services/style/scss-globals/_palette.scss`;
