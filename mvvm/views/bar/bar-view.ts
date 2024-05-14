@@ -43,6 +43,7 @@ export class BarView extends GlobalWidget{
                 const corner = new CairoCorner().getWindow(monitor, CornerPosition.BottomLeft, self);
                 App.addWindow(corner);
             },
+
             child: Widget.CenterBox({
                 class_name: BarViewModel.getBarStyleClass(),
                 start_widget: BarView.Left(),
