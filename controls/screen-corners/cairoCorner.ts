@@ -13,11 +13,9 @@ export enum CornerPosition {
 }
 
 export class CairoCorner{
-    public getWindow(monitor: number, position: CornerPosition, parent: Gtk.Window): Gtk.Window
+    public getWindow(parent: Gtk.Window, monitor: number, position: CornerPosition): Gtk.Window
     {
         const radius = PaletteManager.getRounding();
-
-
         const drawingArea = Widget.DrawingArea({
             widthRequest: radius,
             heightRequest: radius,
@@ -36,7 +34,7 @@ export class CairoCorner{
             name: `corner${monitor}`,
             anchor: 'bottom left'.split(' '),
             class_name: "unset",
-            exclusivity: 'ignore',
+            exclusivity: 'normal',
             visible: true,
             child: drawingArea,
             setup: (self) => self.input_shape_combine_region(new cairo10.Region()),
