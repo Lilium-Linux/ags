@@ -6,6 +6,7 @@ import { GlobalWidget } from "../../Contracts/Widgets/GlobalWidget";
 import Gtk from "@girs/gtk-3.0/gtk-3.0";
 import cairo from "@girs/cairo-1.0";
 import Cairo from 'gi://cairo?version=1.0';
+import cairo10 from "../../types/@girs/cairo-1.0/cairo-1.0";
 
 export class Corners extends GlobalWidget{
     buildWindow(monitor: number): Gtk.Window
@@ -37,7 +38,7 @@ export class Corners extends GlobalWidget{
             exclusivity: 'ignore',
             visible: true,
             child: drawingArea,
-            setup: (self) => self.input_shape_combine_region(new cairo.Region()),
+            setup: (self) => self.input_shape_combine_region(new cairo10.Region()),
         });
     }
 }
