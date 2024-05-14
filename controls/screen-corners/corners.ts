@@ -5,7 +5,7 @@
 //import { Anchor, LayoutManager } from "../../services/layout-manager/LayoutManager";
 import { GlobalWidget } from "../../Contracts/Widgets/GlobalWidget";
 import Gtk from "@girs/gtk-3.0/gtk-3.0";
-import Cairo from "../../types/@girs/gjs/cairo";
+import Cairo from "@girs/gjs/cairo";
 
 //import Gdk from "@girs/gdk-3.0";
 
