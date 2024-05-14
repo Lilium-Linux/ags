@@ -17,6 +17,7 @@ export class CairoCorner{
     public getWindow(parent: Gtk.Window, monitor: number, position: CornerPosition): Gtk.Window
     {
         const radius = PaletteManager.getRounding();
+        console.log(`Adding corner at: ${parent.name}`);
         //const color = widget.get_style_context().get_property('background-color', Gtk.StateFlags.NORMAL);
         // const color = PaletteManager.hexToRgb(PaletteManager.Palette["$color-50"]);
         const drawingArea = Widget.DrawingArea({
