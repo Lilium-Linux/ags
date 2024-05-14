@@ -11,9 +11,10 @@ import cairo10 from "../../types/@girs/cairo-1.0/cairo-1.0";
 export class Corners extends GlobalWidget{
     buildWindow(monitor: number): Gtk.Window
     {
+        const r = 20;
         const drawingArea = Widget.DrawingArea({
-            widthRequest: 300,
-            heightRequest: 300,
+            widthRequest: r,
+            heightRequest: r,
             hpack: 'start',
             vpack: 'end',
             drawFn: (self, cr, w, h) =>
@@ -23,10 +24,13 @@ export class Corners extends GlobalWidget{
                     y: h / 2,
                 };
 
-                const r = 20;
-
-                cr.arc(r, 0, r, Math.PI / 2, Math.PI);
-                cr.lineTo(0, r);
+                // const r = 20;
+                //
+                // cr.arc(r, 0, r, Math.PI / 2, Math.PI);
+                // cr.lineTo(0, r);
+                cr.setSourceRGBA(1, 0, 0, 1)
+                cr.setLineWidth(8)
+                cr.arc(center.x, center.y, 20, 0, Math.PI * 2)
                 cr.stroke()
             },
         })
