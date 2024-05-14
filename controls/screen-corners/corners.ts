@@ -11,7 +11,7 @@ import cairo10 from "../../types/@girs/cairo-1.0/cairo-1.0";
 export class Corners extends GlobalWidget{
     buildWindow(monitor: number): Gtk.Window
     {
-        const r = 20;
+        const r = 10;
         const drawingArea = Widget.DrawingArea({
             widthRequest: r,
             heightRequest: r,
