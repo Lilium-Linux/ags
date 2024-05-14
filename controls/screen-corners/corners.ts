@@ -30,7 +30,7 @@ export class Corners extends GlobalWidget{
                 // cr.lineTo(0, r);
                 cr.setSourceRGBA(1, 0, 0, 1)
                 //cr.setLineWidth(8)
-                cr.arc(r + 20,0 + 20, r, Math.PI / 2, Math.PI);
+                cr.arc(r,0, r, Math.PI / 2, Math.PI);
                 cr.lineTo(0, r);
                 cr.closePath();
                 cr.stroke();
