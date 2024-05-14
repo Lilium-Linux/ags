@@ -33,7 +33,7 @@ export class Corners extends GlobalWidget{
                 cr.arc(r + 20,0 + 20, r, Math.PI / 2, Math.PI);
                 cr.lineTo(0, r);
                 cr.closePath();
-                cr.fill();
+                cr.stroke();
             },
         })
 
