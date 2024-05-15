@@ -53,7 +53,7 @@ export class BarView extends GlobalWidget{
         return window
     }
 
-    private static addCorners(parent: Gtk.Window, monitor: number) {
+    private addCorners(parent: Gtk.Window, monitor: number) {
         const corner = new CairoCorner().getWindow(monitor, CornerPosition.BottomLeft, parent);
         BarView.corners.push(corner);
     }
