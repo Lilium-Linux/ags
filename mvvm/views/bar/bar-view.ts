@@ -6,7 +6,7 @@ import { CairoCorner, CornerPosition } from "../../../controls/screen-corners/ca
 
 export class BarView extends GlobalWidget{
 
-    public static corners: Gtk.Window[];
+    public static corners: Gtk.Window[] = [];
     protected static Left(){
         return Widget.Box({
             spacing: 8,
