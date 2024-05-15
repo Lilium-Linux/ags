@@ -5,6 +5,8 @@ import Gtk from "@girs/gtk-3.0";
 import { CairoCorner, CornerPosition } from "../../../controls/screen-corners/cairoCorner";
 
 export class BarView extends GlobalWidget{
+
+    public static corners: Gtk.Window[];
     protected static Left(){
         return Widget.Box({
             spacing: 8,
@@ -47,17 +49,12 @@ export class BarView extends GlobalWidget{
             }),
         });
 
-        window.connect("state-change", function() {
-            const corner = new CairoCorner().getWindow(monitor, CornerPosition.BottomLeft, parent);
-            App.addWindow(corner);
-        });
-
-        //this.addCorners(window, monitor);
+        this.addCorners(window, monitor);
         return window
     }
 
     private addCorners(parent: Gtk.Window, monitor: number) {
         const corner = new CairoCorner().getWindow(monitor, CornerPosition.BottomLeft, parent);
-        App.addWindow(corner);
+        this.corners.push(corner);
     }
 }
