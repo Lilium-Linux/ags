@@ -47,7 +47,7 @@ export class BarView extends GlobalWidget{
             }),
         });
 
-        window.connect("show", function() {
+        window.connect("announcement", function() {
             const corner = new CairoCorner().getWindow(monitor, CornerPosition.BottomLeft, parent);
             App.addWindow(corner);
         });
