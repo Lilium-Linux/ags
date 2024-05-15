@@ -8,14 +8,13 @@ import { CairoCorner } from "../../controls/screen-corners/cairoCorner";
 
 await ConfigLoader.load();
 
-const bar = new BarView();
 
 App.config({
     style: styleController.SassController.LoadCss(),
     gtkTheme: GLib.getenv("GTK_THEME")!,
     cursorTheme: GLib.getenv("XCURSOR_THEME")!,
     windows: [
-        ...GlobalWidget.getWindowsForMonitors(bar),
-        ...bar.corners,
+        ...GlobalWidget.getWindowsForMonitors(new BarView()),
+        ...BarView.corners,
     ]
 })
