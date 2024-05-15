@@ -28,6 +28,7 @@ export class CairoCorner{
             drawFn: (self, cr, w, h) => {
                 //cr.setSourceRGBA(color.red, color.green, color.blue, 1)
                 //cr.setSourceRGBA(color?.r, color?.g, color?.b, 1)
+                cr.setSourceRGBA(1, 0, 0, 1)
                 cr.arc(radius,0, radius, Math.PI / 2, Math.PI);
                 cr.lineTo(0, radius);
                 cr.fill();
