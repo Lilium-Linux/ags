@@ -4,7 +4,7 @@ import GLib from "gi://GLib?version=2.0"
 import * as styleController from "services/style/sass-controller"
 import { ConfigLoader } from "../configuration-system/config-loader";
 import { GlobalWidget } from "../../Contracts/Widgets/GlobalWidget";
-import { CairoCorner } from "../../controls/screen-corners/cairoCorner";
+import { CairoCorner, CornerPosition } from "../../controls/screen-corners/cairoCorner";
 
 await ConfigLoader.load();
 
@@ -15,7 +15,7 @@ App.config({
     cursorTheme: GLib.getenv("XCURSOR_THEME")!,
     windows: [
         ...GlobalWidget.getWindowsForMonitors(new BarView()),
-        //...BarView.corners,
-        ...GlobalWidget.getWindowsForMonitors(new CairoCorner()),
+        ...GlobalWidget.getWindowsForMonitors(new CairoCorner(CornerPosition.TopRight)),
+        ...GlobalWidget.getWindowsForMonitors(new CairoCorner(CornerPosition.TopLeft)),
     ]
 })
