@@ -40,7 +40,7 @@ export class CairoCorner extends GlobalWidget{
             child: drawingArea,
             setup: (self) => self.input_shape_combine_region(new cairo10.Region()),
         });
-        console.log(`Adding ${window.name} with radius: ${radius} | Color:\n` + color);
+        console.table(`Adding ${window.name} with radius: ${radius} | Color:\n${color});
 
         return window;
 
