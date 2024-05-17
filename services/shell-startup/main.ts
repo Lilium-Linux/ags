@@ -15,7 +15,7 @@ App.config({
     cursorTheme: GLib.getenv("XCURSOR_THEME")!,
     windows: [
         ...GlobalWidget.getWindowsForMonitors(new BarView()),
-        ...BarView.corners,
+        //...BarView.corners,
         ...GlobalWidget.getWindowsForMonitors(new CairoCorner()),
     ]
 })
