@@ -4,7 +4,6 @@ import GLib from "gi://GLib?version=2.0"
 import * as styleController from "services/style/sass-controller"
 import { ConfigLoader } from "../configuration-system/config-loader";
 import { GlobalWidget } from "../../Contracts/Widgets/GlobalWidget";
-import { CairoCorner, CornerPosition } from "../../controls/screen-corners/cairoCorner";
 import { CornerBuilder } from "../../controls/screen-corners/cornerBuilder";
 
 await ConfigLoader.load();
