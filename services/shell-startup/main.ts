@@ -17,5 +17,7 @@ App.config({
         ...GlobalWidget.getWindowsForMonitors(new BarView()),
         ...GlobalWidget.getWindowsForMonitors(new CairoCorner(CornerPosition.TopRight)),
         ...GlobalWidget.getWindowsForMonitors(new CairoCorner(CornerPosition.TopLeft)),
+        ...GlobalWidget.getWindowsForMonitors(new CairoCorner(CornerPosition.BottomLeft)),
+        ...GlobalWidget.getWindowsForMonitors(new CairoCorner(CornerPosition.BottomRight)),
     ]
 })
