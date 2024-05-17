@@ -5,6 +5,7 @@ import { GlobalWidget } from "../../Contracts/Widgets/GlobalWidget";
 import Gtk from "../../types/@girs/gtk-3.0";
 import cairo10 from "../../types/@girs/cairo-1.0/cairo-1.0";
 import { PaletteManager } from "../../services/configuration-system/palette-manager";
+import { LayoutManager } from "../../services/layout-manager/LayoutManager";
 
 export enum CornerPosition {
     TopLeft = "Top-Left",
@@ -15,17 +16,18 @@ export enum CornerPosition {
 
 export class CairoCorner extends GlobalWidget{
     private static position = CornerPosition.BottomLeft;
+    private static radius = PaletteManager.getRounding() + LayoutManager.layout.gaps;
     constructor(cornerPosition: CornerPosition) {
         super();
         CairoCorner.position = cornerPosition;
     }
     buildWindow(monitor: number): Gtk.Window {
-        const radius = PaletteManager.getRounding();
+        //const radius = PaletteManager.getRounding();
         const positionToDraw = CairoCorner.position
         const color = PaletteManager.hexToFloatRgb(PaletteManager.Palette["$color-950"]);
         const drawingArea = Widget.DrawingArea({
-            widthRequest: radius,
-            heightRequest: radius,
+            widthRequest: CairoCorner.radius,
+            heightRequest: CairoCorner.radius,
             hpack: 'start',
             vpack: 'end',
             drawFn: (self, cairo, w, h) => {
@@ -50,7 +52,7 @@ export class CairoCorner extends GlobalWidget{
     }
 
     private drawCorner(cairo: cairo10.Context, position: CornerPosition) {
-        const radius = PaletteManager.getRounding();
+        const radius = CairoCorner.radius;
         const arcParams: Record<CornerPosition, { x: number; y: number; startAngle: number; endAngle: number; lineToX: number; lineToY: number }> = {
             [CornerPosition.TopLeft]: { x: radius, y: radius, startAngle: Math.PI, endAngle: 3 * Math.PI / 2, lineToX: 0, lineToY: 0 },
             [CornerPosition.TopRight]: { x: 0, y: radius, startAngle: 3 * Math.PI / 2, endAngle: 2 * Math.PI, lineToX: radius, lineToY: 0 },
