@@ -58,7 +58,7 @@ export class CairoCorner extends GlobalWidget{
         };
 
         const params = arcParams[CairoCorner.position];
-        cairo.arc(params.x, params.y, r, params.startAngle, params.endAngle);
+        cairo.arc(params.x, params.y, radius, params.startAngle, params.endAngle);
         cairo.lineTo(params.lineToX, params.lineToY);
     }
 }
