@@ -1,15 +1,15 @@
 {
   "$is-dark-theme": true,
   "$rounding": "10px",
-  "$color-50": "#fcf6fd",
-  "$color-100": "#f9ebfc",
-  "$color-200": "#f2d7f7",
-  "$color-300": "#e9b7f0",
-  "$color-400": "#de8ce6",
-  "$color-500": "#cb5fd6",
-  "$color-600": "#b140b9",
-  "$color-700": "#943299",
-  "$color-800": "#842e87",
-  "$color-900": "#672867",
-  "$color-950": "#420f43"
+  "$color-50": "#f8effe",
+  "$color-100": "#f3e2fd",
+  "$color-200": "#eacbfa",
+  "$color-300": "#deacf5",
+  "$color-400": "#d78aef",
+  "$color-500": "#d36ee6",
+  "$color-600": "#cd52d9",
+  "$color-700": "#b643bf",
+  "$color-800": "#92399a",
+  "$color-900": "#74347b",
+  "$color-950": "#140915"
 }

@@ -3,7 +3,7 @@
 
 
 //--> Global
-$global-bg: if($is-dark-theme, #000, $color-50);
+$global-bg: if($is-dark-theme, $color-950, $color-50);
 $lato-font: 'Lato';
 
 //BG
