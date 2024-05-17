@@ -14,39 +14,6 @@ export enum CornerPosition {
 }
 
 export class CairoCorner extends GlobalWidget{
-    public getWindow(parent: Gtk.Window, monitor: number, position: CornerPosition): Gtk.Window
-    {
-        const radius = PaletteManager.getRounding();
-        console.log(`Adding corner with radius: ${radius}`);
-        //const color = widget.get_style_context().get_property('background-color', Gtk.StateFlags.NORMAL);
-        // const color = PaletteManager.hexToRgb(PaletteManager.Palette["$color-50"]);
-        const drawingArea = Widget.DrawingArea({
-            widthRequest: radius,
-            heightRequest: radius,
-            hpack: 'start',
-            vpack: 'end',
-            drawFn: (self, cr, w, h) => {
-                //cr.setSourceRGBA(color.red, color.green, color.blue, 1)
-                //cr.setSourceRGBA(color?.r, color?.g, color?.b, 1)
-                cr.setSourceRGBA(1, 0, 0, 1)
-                cr.arc(radius,0, radius, Math.PI / 2, Math.PI);
-                cr.lineTo(0, radius);
-                cr.fill();
-            },
-        })
-
-        return Widget.Window({
-            monitor,
-            name: `corner${position + monitor}`,
-            anchor: 'bottom left'.split(' '),
-            class_name: "unset",
-            exclusivity: 'normal',
-            visible: true,
-            child: drawingArea,
-            setup: (self) => self.input_shape_combine_region(new cairo10.Region()),
-        });
-    }
-
     buildWindow(monitor: number): Gtk.Window {
         const radius = PaletteManager.getRounding();
         console.log(`Adding corner with radius: ${radius}`);

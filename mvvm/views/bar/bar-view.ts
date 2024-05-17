@@ -2,11 +2,8 @@ import { BarViewModel } from "../../view-models/bar/bar-view-model";
 import { LayoutManager } from "../../../services/layout-manager/LayoutManager";
 import { GlobalWidget } from "../../../Contracts/Widgets/GlobalWidget";
 import Gtk from "@girs/gtk-3.0";
-import { CairoCorner, CornerPosition } from "../../../controls/screen-corners/cairoCorner";
 
 export class BarView extends GlobalWidget{
-
-    public static corners: Gtk.Window[] = [];
     protected static Left(){
         return Widget.Box({
             spacing: 8,
@@ -48,15 +45,6 @@ export class BarView extends GlobalWidget{
                 end_widget: BarView.Right()
             }),
         });
-
-        BarView.addCorners(window, monitor);
         return window
-    }
-
-    private static addCorners(parent: Gtk.Window, monitor: number) {
-        const corner = new CairoCorner().getWindow(monitor, CornerPosition.BottomLeft, parent);
-        //console.log(`Adding corner: ${corner.name}`)
-        App.addWindow(corner);
-        //BarView.corners.push(corner);
     }
 }
