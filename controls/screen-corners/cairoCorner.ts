@@ -37,7 +37,7 @@ export class CairoCorner extends GlobalWidget{
         let window = Widget.Window({
             monitor,
             name: `corner${CairoCorner.position}${monitor}`,
-            anchor: CairoCorner.position.split('-'),
+            anchor: CairoCorner.position.toLowerCase().split('-'),
             class_name: "unset",
             exclusivity: 'normal',
             visible: true,
