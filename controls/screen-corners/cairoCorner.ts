@@ -15,7 +15,10 @@ export enum CornerPosition {
 
 export class CairoCorner extends GlobalWidget{
     private static position = CornerPosition.BottomLeft;
-    constructor(cornerPosition: CornerPosition) {CairoCorner.position = cornerPosition}
+    constructor(cornerPosition: CornerPosition) {
+        super();
+        CairoCorner.position = cornerPosition;
+    }
     buildWindow(monitor: number): Gtk.Window {
         const radius = PaletteManager.getRounding();
         const color = PaletteManager.hexToFloatRgb(PaletteManager.Palette["$color-950"]);
