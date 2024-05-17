@@ -49,11 +49,12 @@ export class CairoCorner extends GlobalWidget{
     }
 
     private drawCorner(cairo: cairo10.Context) {
+        const radius = PaletteManager.getRounding();
         const arcParams: Record<CornerPosition, { x: number; y: number; startAngle: number; endAngle: number; lineToX: number; lineToY: number }> = {
-            [CornerPosition.TopLeft]: { x: r, y: r, startAngle: Math.PI, endAngle: 3 * Math.PI / 2, lineToX: 0, lineToY: 0 },
-            [CornerPosition.TopRight]: { x: 0, y: r, startAngle: 3 * Math.PI / 2, endAngle: 2 * Math.PI, lineToX: r, lineToY: 0 },
-            [CornerPosition.BottomLeft]: { x: r, y: 0, startAngle: Math.PI / 2, endAngle: Math.PI, lineToX: 0, lineToY: r },
-            [CornerPosition.BottomRight]: { x: 0, y: 0, startAngle: 0, endAngle: Math.PI / 2, lineToX: r, lineToY: r },
+            [CornerPosition.TopLeft]: { x: radius, y: radius, startAngle: Math.PI, endAngle: 3 * Math.PI / 2, lineToX: 0, lineToY: 0 },
+            [CornerPosition.TopRight]: { x: 0, y: radius, startAngle: 3 * Math.PI / 2, endAngle: 2 * Math.PI, lineToX: r, lineToY: 0 },
+            [CornerPosition.BottomLeft]: { x: radius, y: 0, startAngle: Math.PI / 2, endAngle: Math.PI, lineToX: 0, lineToY: radius },
+            [CornerPosition.BottomRight]: { x: 0, y: 0, startAngle: 0, endAngle: Math.PI / 2, lineToX: radius, lineToY: radius },
         };
 
         const params = arcParams[CairoCorner.position];
