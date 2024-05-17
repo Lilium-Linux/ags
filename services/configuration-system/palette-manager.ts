@@ -43,7 +43,7 @@ export class PaletteManager {
         return Number(this.Palette.$rounding.replace("px", ""));
     }
 
-    public static hexToRgb(hex: string): { r: number; g: number; b: number } | null {
+    public static hexToRgb(hex: string): { r: number; g: number; b: number } {
         hex = hex.replace(/^#/, '');
 
         const bigint = parseInt(hex, 16);

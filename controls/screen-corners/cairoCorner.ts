@@ -16,15 +16,14 @@ export enum CornerPosition {
 export class CairoCorner extends GlobalWidget{
     buildWindow(monitor: number): Gtk.Window {
         const radius = PaletteManager.getRounding();
+        const color = PaletteManager.hexToRgb(PaletteManager.Palette["$color-950"]);
         const drawingArea = Widget.DrawingArea({
             widthRequest: radius,
             heightRequest: radius,
             hpack: 'start',
             vpack: 'end',
             drawFn: (self, cr, w, h) => {
-                //cr.setSourceRGBA(color.red, color.green, color.blue, 1)
-                //cr.setSourceRGBA(color?.r, color?.g, color?.b, 1)
-                cr.setSourceRGBA(1, 0, 0, 1)
+                cr.setSourceRGBA(color.r, color.g, color.r, 1)
                 cr.arc(radius,0, radius, Math.PI / 2, Math.PI);
                 cr.lineTo(0, radius);
                 cr.fill();
