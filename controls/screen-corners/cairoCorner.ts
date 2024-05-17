@@ -21,6 +21,7 @@ export class CairoCorner extends GlobalWidget{
     }
     buildWindow(monitor: number): Gtk.Window {
         const radius = PaletteManager.getRounding();
+        const positionToDraw = CairoCorner.position
         const color = PaletteManager.hexToFloatRgb(PaletteManager.Palette["$color-950"]);
         const drawingArea = Widget.DrawingArea({
             widthRequest: radius,
@@ -29,7 +30,7 @@ export class CairoCorner extends GlobalWidget{
             vpack: 'end',
             drawFn: (self, cairo, w, h) => {
                 cairo.setSourceRGBA(color.r, color.g, color.r, 1)
-                this.drawCorner(cairo);
+                this.drawCorner(cairo, positionToDraw);
                 cairo.fill();
             },
         })
@@ -48,7 +49,7 @@ export class CairoCorner extends GlobalWidget{
         return window;
     }
 
-    private drawCorner(cairo: cairo10.Context) {
+    private drawCorner(cairo: cairo10.Context, position: CornerPosition) {
         const radius = PaletteManager.getRounding();
         const arcParams: Record<CornerPosition, { x: number; y: number; startAngle: number; endAngle: number; lineToX: number; lineToY: number }> = {
             [CornerPosition.TopLeft]: { x: radius, y: radius, startAngle: Math.PI, endAngle: 3 * Math.PI / 2, lineToX: 0, lineToY: 0 },
@@ -57,7 +58,7 @@ export class CairoCorner extends GlobalWidget{
             [CornerPosition.BottomRight]: { x: 0, y: 0, startAngle: 0, endAngle: Math.PI / 2, lineToX: radius, lineToY: radius },
         };
 
-        const params = arcParams[CairoCorner.position];
+        const params = arcParams[position];
         cairo.arc(params.x, params.y, radius, params.startAngle, params.endAngle);
         cairo.lineTo(params.lineToX, params.lineToY);
     }
