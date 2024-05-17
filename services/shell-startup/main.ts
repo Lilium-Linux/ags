@@ -5,6 +5,7 @@ import * as styleController from "services/style/sass-controller"
 import { ConfigLoader } from "../configuration-system/config-loader";
 import { GlobalWidget } from "../../Contracts/Widgets/GlobalWidget";
 import { CairoCorner, CornerPosition } from "../../controls/screen-corners/cairoCorner";
+import { CornerBuilder } from "../../controls/screen-corners/cornerBuilder";
 
 await ConfigLoader.load();
 
@@ -15,9 +16,6 @@ App.config({
     cursorTheme: GLib.getenv("XCURSOR_THEME")!,
     windows: [
         ...GlobalWidget.getWindowsForMonitors(new BarView()),
-        ...GlobalWidget.getWindowsForMonitors(new CairoCorner(CornerPosition.TopRight)),
-        ...GlobalWidget.getWindowsForMonitors(new CairoCorner(CornerPosition.TopLeft)),
-        ...GlobalWidget.getWindowsForMonitors(new CairoCorner(CornerPosition.BottomLeft)),
-        ...GlobalWidget.getWindowsForMonitors(new CairoCorner(CornerPosition.BottomRight)),
+        ...CornerBuilder.buildCorners(),
     ]
 })
