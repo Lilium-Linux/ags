@@ -43,13 +43,13 @@ export class PaletteManager {
         return Number(this.Palette.$rounding.replace("px", ""));
     }
 
-    public static hexToRgb(hex: string): { r: number; g: number; b: number } {
+    public static hexToFloatRgb(hex: string): { r: number; g: number; b: number } {
         hex = hex.replace(/^#/, '');
 
         const bigint = parseInt(hex, 16);
-        const r = (bigint >> 16) & 255;
-        const g = (bigint >> 8) & 255;
-        const b = bigint & 255;
+        const r = ((bigint >> 16) & 255) / 255;
+        const g = ((bigint >> 8) & 255) / 255;
+        const b = (bigint & 255) / 255;
 
         return { r, g, b };
     }
