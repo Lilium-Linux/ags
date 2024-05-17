@@ -14,4 +14,5 @@ export const liliumLogoDark = `${IMAGES}/lilium_logo_dark.svg`;
 export const getLiliumLogo = () =>
     PaletteManager.Palette["$is-dark-theme"] ? `${IMAGES}/lilium_logo_light.svg` : `${IMAGES}/lilium_logo_dark.svg`;
 
-export const barStyleClass = () => LayoutManager.layout.barStyle == BarStyle.Fill ? "bar" : "barRounded";
+export const barStyleClass = () =>
+    LayoutManager.layout.barStyle == BarStyle.Fill ||  LayoutManager.layout.barStyle == BarStyle.Corners? "bar" : "barRounded";
