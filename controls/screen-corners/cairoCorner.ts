@@ -25,8 +25,8 @@ export class CairoCorner extends GlobalWidget{
         const positionToDraw = CairoCorner.position
         const color = PaletteManager.hexToFloatRgb(PaletteManager.Palette["$color-950"]);
         const drawingArea = Widget.DrawingArea({
-            widthRequest: CairoCorner.radius,
-            heightRequest: CairoCorner.radius,
+            widthRequest: radius,
+            heightRequest: radius,
             hpack: 'start',
             vpack: 'end',
             drawFn: (self, cairo, w, h) => {
