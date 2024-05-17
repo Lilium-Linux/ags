@@ -16,5 +16,6 @@ App.config({
     windows: [
         ...GlobalWidget.getWindowsForMonitors(new BarView()),
         ...BarView.corners,
+        ...GlobalWidget.getWindowsForMonitors(new CairoCorner()),
     ]
 })
