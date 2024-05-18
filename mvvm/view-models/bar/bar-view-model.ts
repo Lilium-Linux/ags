@@ -47,7 +47,7 @@ export class BarViewModel{
                 };
                 const button = Widget.Button(buttonProps);
                 button.hpack = "center";
-                button.vpack = "center";
+                button.vpack = "fill";
                 return button
             });
         });
