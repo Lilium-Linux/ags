@@ -29,6 +29,7 @@ label.time{
 
 //Workspaces
 .workspace{
+  margin: 0 5px 0 5px;
   min-height: 10px;
   min-width: 10px;
   border-radius: 50px;
@@ -38,6 +39,7 @@ label.time{
 }
 
 .workspace-focused{
+  margin: 0 5px 0 5px;
   min-height: 12px;
   min-width: 12px;
   border-radius: 50px;
@@ -45,10 +47,10 @@ label.time{
   transition: all 0.3s ease;
   background-color: $flat-button-active;
 }
-
-box.workspace-box > * {
-  margin: 0 5px 0 5px;
-}
+//
+//box.workspace-box > * {
+//  margin: 0 5px 0 5px;
+//}
 
 //Launcher button
 .logo-button{
