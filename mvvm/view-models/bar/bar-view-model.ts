@@ -46,13 +46,14 @@ export class BarViewModel{
                     class_name: activeWorkspaceId.as(activeId => `${activeId === id ? "workspace-focused" : "workspace"}`),
                 };
                 const button = Widget.Button(buttonProps);
-                button.hpack = "center";
+                button.hpack = "fill";
                 button.vpack = "center";
                 return button
             });
         });
 
         return Widget.Box({
+            spacing: 10,
             class_name: "workspace-box",
             children: workspaceButtons,
         })
