@@ -35,27 +35,46 @@ export class BarViewModel{
     }
 
     public static getWorkspaces(){
-        const activeWorkspaceId = model.hyprlandService.active.workspace.bind("id");
+        // const activeWorkspaceId = model.hyprlandService.active.workspace.bind("id");
+        //
+        // const workspaceButtons = model.hyprlandService.bind("workspaces").as(workspaces => {
+        //     return workspaces.map(workspace => {
+        //         const { id } = workspace;
+        //
+        //         const buttonProps = {
+        //             on_clicked: () => model.hyprlandService.messageAsync(`dispatch workspace ${id}`),
+        //             class_name: activeWorkspaceId.as(activeId => `${activeId === id ? "workspace-focused" : "workspace"}`),
+        //         };
+        //         const button = Widget.Button(buttonProps);
+        //         button.hpack = "fill";
+        //         button.vpack = "center";
+        //         return button
+        //     });
+        // });
+        //
+        // return Widget.Box({
+        //     spacing: 10,
+        //     class_name: "workspace-box",
+        //     children: workspaceButtons,
+        // })
 
-        const workspaceButtons = model.hyprlandService.bind("workspaces").as(workspaces => {
-            return workspaces.map(workspace => {
-                const { id } = workspace;
+        const dispatch = ws => model.hyprlandService.messageAsync(`dispatch workspace ${ws}`);
 
-                const buttonProps = {
-                    on_clicked: () => model.hyprlandService.messageAsync(`dispatch workspace ${id}`),
-                    class_name: activeWorkspaceId.as(activeId => `${activeId === id ? "workspace-focused" : "workspace"}`),
-                };
-                const button = Widget.Button(buttonProps);
-                button.hpack = "fill";
-                button.vpack = "center";
-                return button
-            });
-        });
+        const Workspaces = () => Widget.EventBox({
+            onScrollUp: () => dispatch('+1'),
+            onScrollDown: () => dispatch('-1'),
+            child: Widget.Box({
+                children: Array.from({ length: 10 }, (_, i) => i + 1).map(i => Widget.Button({
+                    attribute: i,
+                    label: `${i}`,
+                    onClicked: () => dispatch(i),
+                })),
 
-        return Widget.Box({
-            spacing: 10,
-            class_name: "workspace-box",
-            children: workspaceButtons,
+                // remove this setup hook if you want fixed number of buttons
+                setup: self => self.hook(model.hyprlandService, () => self.children.forEach(btn => {
+                    btn.visible = model.hyprlandService.workspaces.some(ws => ws.id === btn.attribute);
+                })),
+            }),
         })
     }
 
