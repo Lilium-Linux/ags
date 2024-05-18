@@ -8,7 +8,8 @@ export class BarView extends GlobalWidget{
         return Widget.Box({
             spacing: 8,
             children: [
-                BarViewModel.getLauncherButton()
+                BarViewModel.getLauncherButton(),
+                BarViewModel.getWorkspaces(),
             ],
         })
     }
@@ -16,7 +17,7 @@ export class BarView extends GlobalWidget{
         return Widget.Box({
             spacing: 8,
             children: [
-                BarViewModel.getWorkspaces()
+                //BarViewModel.getWorkspaces()
             ],
         })
     }
