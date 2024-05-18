@@ -33,7 +33,7 @@ label.time{
   min-width: 10px;
   border-radius: 50px;
   opacity: 0.3;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease;
   background-color: $flat-button-default;
 }
 
@@ -42,7 +42,7 @@ label.time{
   min-width: 12px;
   border-radius: 50px;
   opacity: 0.8;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease;
   background-color: $flat-button-active;
 }
 
