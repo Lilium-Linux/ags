@@ -28,23 +28,21 @@ label.time{
 }
 
 //Workspaces
-.workspace{
+.workspace {
   min-height: 10px;
   min-width: 10px;
   border-radius: 50px;
   opacity: 0.3;
   transition: min-width 0.5s ease, min-height 0.5s ease, background-color 0.5s ease, opacity 0.5s ease;
   background-color: $flat-button-default;
+
+  &-focused {
+    min-width: 24px;
+    opacity: 0.8;
+    background-color: $flat-button-active;
+  }
 }
 
-.workspace-focused{
-  min-height: 10px;
-  min-width: 24px;
-  border-radius: 50px;
-  opacity: 0.8;
-  transition: min-width 0.5s ease, min-height 0.5s ease, background-color 0.5s ease, opacity 0.5s ease;
-  background-color: $flat-button-active;
-}
 //Launcher button
 .logo-button{
   min-width: 45px;
