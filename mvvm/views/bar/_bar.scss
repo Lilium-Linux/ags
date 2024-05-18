@@ -35,7 +35,6 @@ label.time {
   min-width: 10px;
   border-radius: 50px;
   opacity: 0.3;
-  transform: translate(-50%, 0);
   transition: min-width 0.1s linear, min-height 0.1s linear, background-color 0.1s linear, opacity 0.1s linear;
   background-color: $flat-button-default;
 
