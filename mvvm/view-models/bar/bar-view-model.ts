@@ -60,7 +60,7 @@ export class BarViewModel{
 
         const dispatch = ws => model.hyprlandService.messageAsync(`dispatch workspace ${ws}`);
 
-        const Workspaces = () => Widget.EventBox({
+        return Widget.EventBox({
             onScrollUp: () => dispatch('+1'),
             onScrollDown: () => dispatch('-1'),
             child: Widget.Box({
