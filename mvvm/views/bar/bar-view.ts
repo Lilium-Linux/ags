@@ -32,7 +32,7 @@ export class BarView extends GlobalWidget{
         })
     }
     buildWindow(monitor: number): Gtk.Window {
-        let window = Widget.Window({
+        return Widget.Window({
             monitor,
             name: `bar${monitor}`,
             class_name: BarViewModel.getBarStyleClass(),
@@ -45,7 +45,6 @@ export class BarView extends GlobalWidget{
                 center_widget: BarView.Center(),
                 end_widget: BarView.Right()
             }),
-        });
-        return window
+        })
     }
 }
