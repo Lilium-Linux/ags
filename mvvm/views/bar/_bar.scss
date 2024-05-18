@@ -1,5 +1,7 @@
 @import "../../../services/style/scss-globals/theme";
 
+$exp = cubic-bezier(0,.5,.5,1);
+
 .bar{
   border-radius: 0;
 }
@@ -34,7 +36,7 @@ label.time{
   min-width: 10px;
   border-radius: 50px;
   opacity: 0.3;
-  transition: min-width 0.1s linear, min-height 0.1s linear, background-color 0.1s linear, opacity 0.1s linear;
+  transition: min-width 0.1s $exp, min-height 0.1s $exp, background-color 0.1s $exp, opacity 0.1s $exp;
   background-color: $flat-button-default;
 
   &-focused {
