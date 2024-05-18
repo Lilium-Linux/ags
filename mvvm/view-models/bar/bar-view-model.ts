@@ -59,14 +59,15 @@ export class BarViewModel{
         // })
 
         const dispatch = ws => model.hyprlandService.messageAsync(`dispatch workspace ${ws}`);
-
-        return Widget.EventBox({
-            onScrollUp: () => dispatch('+1'),
-            onScrollDown: () => dispatch('-1'),
+        const activeWorkspaceId = model.hyprlandService.active.workspace.bind("id");
+        return Widget.Box({
+            spacing: 10,
+            class_name: "workspace-box",
             child: Widget.Box({
                 children: Array.from({ length: 10 }, (_, i) => i + 1).map(i => Widget.Button({
                     attribute: i,
                     label: `${i}`,
+                    class_name: activeWorkspaceId.as(activeId => `${activeId === i ? "workspace-focused" : "workspace"}`),
                     onClicked: () => dispatch(i),
                 })),
 
