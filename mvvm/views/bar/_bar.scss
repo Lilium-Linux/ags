@@ -36,7 +36,7 @@ label.time{
   min-width: 10px;
   border-radius: 50px;
   opacity: 0.3;
-  transition: min-width 0.1s $exp, min-height 0.1s $exp, background-color 0.1s $exp, opacity 0.1s $exp;
+  transition: min-width $exp, min-height $exp, background-color $exp, opacity $exp;
   background-color: $flat-button-default;
 
   &-focused {
