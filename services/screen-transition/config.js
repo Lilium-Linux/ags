@@ -1,4 +1,4 @@
-import Gdk from "@girs/gdk-3.0";
+import Gdk from "../../types/@girs/gdk-3.0/gdk-3.0";
 
 const screen = Widget.Window({
     name: 'transition',
