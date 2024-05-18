@@ -70,7 +70,9 @@ export class BarViewModel{
                     //class_name: "tray-icon",
                 };
                 // Create and return the button widget
-                return Widget.Button(buttonProps);
+                let button = Widget.Button(buttonProps);
+                button.vpack = "fill";
+                return button;
             });
         });
 
