@@ -33,17 +33,17 @@ label.time{
   min-width: 10px;
   border-radius: 50px;
   opacity: 0.3;
-  transition: min-width 0.5s ease, background-color 0.5s ease, opacity 0.5s ease;
+  transition: min-width 0.5s ease, min-height 0.5s ease, background-color 0.5s ease, opacity 0.5s ease;
   background-color: $flat-button-default;
 
   &-focused {
-    min-height: 10px;
+    @extend .workspace;
     min-width: 24px;
     opacity: 0.8;
-    transition: min-width 0.5s ease, background-color 0.5s ease, opacity 0.5s ease;
     background-color: $flat-button-active;
   }
 }
+
 
 //Launcher button
 .logo-button{
