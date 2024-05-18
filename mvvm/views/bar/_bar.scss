@@ -1,10 +1,10 @@
 @import "../../../services/style/scss-globals/theme";
 
-.bar{
+.bar {
   border-radius: 0;
 }
 
-box.barRounded{
+box.barRounded {
   border-radius: $corner-radius;
 }
 
@@ -19,11 +19,12 @@ button.date {
   }
 
   &:hover label {
-    color: $secondary-text;//$hyperlink-text;
+    color: $secondary-text; //$hyperlink-text;
     opacity: 1;
   }
 }
-label.time{
+
+label.time {
   font-weight: bold;
 }
 
@@ -34,6 +35,7 @@ label.time{
   min-width: 10px;
   border-radius: 50px;
   opacity: 0.3;
+  transform: translate(-50%, 0);
   transition: min-width 0.1s linear, min-height 0.1s linear, background-color 0.1s linear, opacity 0.1s linear;
   background-color: $flat-button-default;
 
@@ -48,16 +50,17 @@ label.time{
 
 
 //Launcher button
-.logo-button{
+.logo-button {
   min-width: 45px;
   min-height: 45px;
 }
-.logo-icon{
+
+.logo-icon {
   opacity: 0.8;
 }
 
 //Tray
-.tray-icon{
+.tray-icon {
   min-width: 40px;
   min-height: 40px;
 }
