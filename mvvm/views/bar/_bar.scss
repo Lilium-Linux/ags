@@ -44,7 +44,7 @@ label.time{
   min-width: 24px;
   border-radius: 50px;
   opacity: 0.8;
-  transition: all 0.3s ease;
+  transition: min-width 0.5s ease, min-height 0.5s ease, background-color 0.5s ease, opacity 0.5s ease;
   background-color: $flat-button-active;
 }
 //Launcher button
