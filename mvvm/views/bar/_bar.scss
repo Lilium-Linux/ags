@@ -28,7 +28,6 @@ label.time{
 }
 
 //Workspaces
-
 .workspace{
   min-height: 10px;
   min-width: 10px;
@@ -56,4 +55,10 @@ box.workspace-box > * {
 }
 .logo-icon{
   opacity: 0.8;
+}
+
+//Tray
+.tray-icon{
+  min-width: 40px;
+  min-height: 40px;
 }
