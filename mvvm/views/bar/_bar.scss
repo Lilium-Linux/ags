@@ -31,7 +31,7 @@ label.time{
 .workspace{
   margin: 0 5px 0 5px;
   min-height: 10px;
-  min-width: 10px;
+  min-width: 15px;
   border-radius: 50px;
   opacity: 0.3;
   transition: all 0.3s ease;
@@ -47,11 +47,6 @@ label.time{
   transition: all 0.3s ease;
   background-color: $flat-button-active;
 }
-//
-//box.workspace-box > * {
-//  margin: 0 5px 0 5px;
-//}
-
 //Launcher button
 .logo-button{
   min-width: 45px;
