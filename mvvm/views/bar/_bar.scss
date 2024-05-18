@@ -30,14 +30,14 @@ label.time{
 //Workspaces
 
 .workspace{
-  min-height: 5px;
-  min-width: 5px;
-  border-radius: 50%;
-  background-color: $flat-button-disabled;
+  border-radius: 50px;
+  opacity: 0.7;
+  background-color: $flat-button-default;
 }
 
 .workspace-focused{
-  min-width: 10px;
+  border-radius: 50px;
+  opacity: 0.8;
   background-color: $flat-button-active;
 }
 
