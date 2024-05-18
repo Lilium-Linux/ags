@@ -63,7 +63,7 @@ export class BarViewModel{
             return items.map(item => {
                 // Define button properties
                 const buttonProps = {
-                    child: Widget.Icon({ icon: item.bind("icon"), size: 25 }),
+                    child: Widget.Icon({ icon: item.bind("icon"), size: 20 }),
                     on_primary_click: (_, event) => item.activate(event),
                     on_secondary_click: (_, event) => item.openMenu(event),
                     tooltip_markup: item.bind("tooltip_markup"),
@@ -78,6 +78,7 @@ export class BarViewModel{
 
         // Create a box widget to contain the tray items
         return Widget.Box({
+            spacing: 8,
             children: trayItems,
         });
     }
