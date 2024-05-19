@@ -11,7 +11,7 @@ export class AppLauncherController{
     }
 
     public static tryToggle(){
-        const currentMonitor = 0;
-        App.toggleWindow(AppLauncherView.getName(0));
+        if(App.getWindow(AppLauncherView.getName()) == null) App.addWindow(new AppLauncherView().window);
+        App.toggleWindow(AppLauncherView.getName());
     }
 }
