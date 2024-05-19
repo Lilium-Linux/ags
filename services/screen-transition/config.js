@@ -6,7 +6,7 @@ const screen = Widget.Window({
     layer: "overlay",
     anchor: ['top', 'left', 'right', 'bottom'],
     exclusivity: "ignore",
-    child: Widget.Calendar({
+    child: Widget.Box({
         class_name: "transition"
     })
     // child: Widget.DrawingArea(
@@ -22,5 +22,5 @@ function forMonitors(widget) {
 
 App.config({
     style: `${App.configDir}/transition.css`,
-    windows: [...forMonitors(screen)]
+    windows: [screen]
 })
