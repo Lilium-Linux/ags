@@ -12,6 +12,7 @@ export class AppLauncherView {
         heightRequest: 200,
         widthRequest: 200,
         keymode: 'exclusive',
+        margins: LayoutManager.getMenuMargins(),
         anchor: LayoutManager.getAnchor().slice(0, -1),
         child: Widget.Entry({
 
