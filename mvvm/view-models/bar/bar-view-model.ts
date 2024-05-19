@@ -1,4 +1,5 @@
 import * as model from "../../models/bar/bar-model";
+import { AppLauncherController } from "../../controllers/app-launcher/app-launcher-controller";
 
 export class BarViewModel{
 
@@ -35,29 +36,6 @@ export class BarViewModel{
     }
 
     public static getWorkspaces(){
-        // const activeWorkspaceId = model.hyprlandService.active.workspace.bind("id");
-        //
-        // const workspaceButtons = model.hyprlandService.bind("workspaces").as(workspaces => {
-        //     return workspaces.map(workspace => {
-        //         const { id } = workspace;
-        //
-        //         const buttonProps = {
-        //             on_clicked: () => model.hyprlandService.messageAsync(`dispatch workspace ${id}`),
-        //             class_name: activeWorkspaceId.as(activeId => `${activeId === id ? "workspace-focused" : "workspace"}`),
-        //         };
-        //         const button = Widget.Button(buttonProps);
-        //         button.hpack = "fill";
-        //         button.vpack = "center";
-        //         return button
-        //     });
-        // });
-        //
-        // return Widget.Box({
-        //     spacing: 10,
-        //     class_name: "workspace-box",
-        //     children: workspaceButtons,
-        // })
-
         const dispatch = ws => model.hyprlandService.messageAsync(`dispatch workspace ${ws}`);
         const activeWorkspaceId = model.hyprlandService.active.workspace.bind("id");
         return Widget.Box({
@@ -106,11 +84,10 @@ export class BarViewModel{
 
     public static getBarStyleClass = () => model.barStyleClass();
 
-    //TODO: MAKE APP LAUNCHER
     public static getLauncherButton(){
         return Widget.Button({
             class_name: "logo-button",
-            on_clicked: async ()=> await Utils.execAsync("wofi --show drun"),
+            on_clicked: () => AppLauncherController.tryToggle(),
             child: Widget.Icon({
                 class_name: "logo-icon",
                 size: 30,

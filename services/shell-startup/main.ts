@@ -5,6 +5,7 @@ import * as styleController from "services/style/sass-controller"
 import { ConfigLoader } from "../configuration-system/config-loader";
 import { GlobalWidget } from "../../Contracts/Widgets/GlobalWidget";
 import { CornerBuilder } from "../../controls/screen-corners/cornerBuilder";
+import { AppLauncherView } from "../../mvvm/views/app-launcher/app-launcher-view";
 
 await ConfigLoader.load();
 
@@ -15,6 +16,7 @@ App.config({
     cursorTheme: GLib.getenv("XCURSOR_THEME")!,
     windows: [
         ...GlobalWidget.getWindowsForMonitors(new BarView()),
+        ...GlobalWidget.getWindowsForMonitors(new AppLauncherView()),
         ...CornerBuilder.buildCorners(),
     ]
 })
