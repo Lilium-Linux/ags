@@ -87,7 +87,7 @@ export class BarViewModel{
     public static getLauncherButton(){
         return Widget.Button({
             class_name: "logo-button",
-            on_clicked: async () => await AppLauncherController.tryToggle(),
+            on_clicked: () => AppLauncherController.tryToggle(),
             child: Widget.Icon({
                 class_name: "logo-icon",
                 size: 30,
