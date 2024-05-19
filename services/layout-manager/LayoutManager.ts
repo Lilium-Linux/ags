@@ -39,7 +39,7 @@ export class LayoutManager {
     }
 
     static getMenuMargins(): number[] | undefined {
-        return Array(4).fill(this.layout.gaps * 2);
+        return Array(4).fill(this.layout.gaps * 3);
     }
 
 
