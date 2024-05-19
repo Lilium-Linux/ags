@@ -12,8 +12,7 @@ export class AppLauncherView {
         heightRequest: 200,
         widthRequest: 200,
         keymode: 'exclusive',
-        // @ts-ignore
-        anchor: LayoutManager.getAnchor().pop(),
+        anchor: LayoutManager.getAnchor().slice(0, -1),
         child: Widget.Entry({
 
         })
