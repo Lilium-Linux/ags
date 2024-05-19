@@ -6,7 +6,9 @@ const screen = Widget.Window({
     layer: "overlay",
     anchor: ['top', 'left', 'right', 'bottom'],
     exclusivity: "ignore",
-    child: Widget.Calendar()
+    child: Widget.Calendar({
+        class_name: "transition"
+    })
     // child: Widget.DrawingArea(
     //
     // ),
