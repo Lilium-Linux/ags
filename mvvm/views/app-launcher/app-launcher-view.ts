@@ -10,7 +10,7 @@ export class AppLauncherView extends GlobalWidget{
             heightRequest: 200,
             widthRequest: 200,
             child: Widget.Label({
-                label: "Launcher Demo!"
+                label: `Launcher Demo! Name: ${AppLauncherView.getName(monitor)}`
             })
         })
     }
