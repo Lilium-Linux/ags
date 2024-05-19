@@ -2,6 +2,7 @@ import Gdk from "gi://Gdk";
 
 const screen = Widget.Window({
     name: 'transition',
+    class_name: "animated",
     layer: "overlay",
     anchor: ['top', 'left', 'right', 'bottom'],
     exclusivity: "ignore",
