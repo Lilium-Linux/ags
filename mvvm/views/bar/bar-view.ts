@@ -37,7 +37,7 @@ export class BarView extends GlobalWidget{
             name: `bar${monitor}`,
             class_name: BarViewModel.getBarStyleClass(),
             anchor: LayoutManager.getAnchor(),
-            margins: LayoutManager.getMenuMargins(), //[20, 20, 0, 20],
+            margins: LayoutManager.getBarMargins(), //[20, 20, 0, 20],
             exclusivity: "exclusive",
             child: Widget.CenterBox({
                 class_name: BarViewModel.getBarStyleClass(),

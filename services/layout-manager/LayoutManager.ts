@@ -38,7 +38,12 @@ export class LayoutManager {
         }
     }
 
-    static getMenuMargins() : number[] | undefined {
+    static getMenuMargins(): number[] | undefined {
+        return Array(4).fill(this.layout.gaps * 2);
+    }
+
+
+    static getBarMargins() : number[] | undefined {
         if (this.layout.barStyle == BarStyle.Fill || this.layout.barStyle == BarStyle.Corners)
             return undefined;
 
