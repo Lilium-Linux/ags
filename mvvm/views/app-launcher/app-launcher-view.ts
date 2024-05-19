@@ -3,7 +3,9 @@ import { GlobalWidget } from "../../../Contracts/Widgets/GlobalWidget";
 
 export class AppLauncherView {
     public static getName() { return `launcher`}
-    public window: Gtk.Window = Widget.Window({
+    public getWindow() { return this.window; }
+
+    private window: Gtk.Window = Widget.Window({
         visible: false,
         name: AppLauncherView.getName(),
         heightRequest: 200,
@@ -11,5 +13,7 @@ export class AppLauncherView {
         child: Widget.Label({
             label: `Launcher Demo!`
         })
-    })
+    });
+
+
 }
