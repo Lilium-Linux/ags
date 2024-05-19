@@ -1,4 +1,4 @@
-*:not(popover) { all: unset;}
+*:not(popover, menu, menuitem) { all: unset;}
 
 @import "scss-globals/default-scheme";
 @import "scss-globals/palette";

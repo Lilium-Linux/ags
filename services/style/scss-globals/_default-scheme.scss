@@ -20,22 +20,22 @@ menu {
   padding: 15px;
 }
 
-menuitem {
-  border-radius: $corner-radius;
-  padding: 10px 10px;
-  color: $flat-button-active;
-  transition: color 0.1s ease;
-
-  &:hover{
-    background-color: $main-bg;
-    color: $text;
-  }
-}
-
-menuitem:checked {
-  background-color: $contrast-bg;
-  color: $text;
-}
+//menuitem {
+//  border-radius: $corner-radius;
+//  padding: 10px 10px;
+//  color: $flat-button-active;
+//  transition: color 0.1s ease;
+//
+//  &:hover{
+//    background-color: $main-bg;
+//    color: $text;
+//  }
+//}
+//
+//menuitem:checked {
+//  background-color: $contrast-bg;
+//  color: $text;
+//}
 
 .unset {
   all: unset;
