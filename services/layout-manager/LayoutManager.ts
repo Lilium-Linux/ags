@@ -23,6 +23,7 @@ export class LayoutManager {
     private static jsonFilePath: string = `${App.configDir}/services/layout-manager/layout.json`;
     public static rawJson: string = Utils.readFile(this.jsonFilePath);
     public static layout: Layout = JSON.parse(this.rawJson.toString());
+
     public static getAnchor() : ("bottom" | "left" | "right" | "top" )[] {
         switch(this.layout.uiAnchor) {
             case Anchor.Bottom:
@@ -42,7 +43,6 @@ export class LayoutManager {
         return Array(4).fill(this.layout.gaps * 3);
     }
 
-
     static getBarMargins() : number[] | undefined {
         if (this.layout.barStyle == BarStyle.Fill || this.layout.barStyle == BarStyle.Corners)
             return undefined;
@@ -61,5 +61,9 @@ export class LayoutManager {
             default:
                 return [0, doubleGaps, doubleGaps, doubleGaps];
         }
+    }
+
+    static isVertical() : boolean {
+        return this.layout.uiAnchor == Anchor.Left || this.layout.uiAnchor == Anchor.Right;
     }
 }

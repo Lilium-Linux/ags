@@ -7,6 +7,7 @@ export class BarView extends GlobalWidget{
     protected static Left(){
         return Widget.Box({
             spacing: 8,
+            vertical: LayoutManager.isVertical(),
             children: [
                 BarViewModel.getLauncherButton(),
                 BarViewModel.getWorkspaces(),
@@ -16,6 +17,7 @@ export class BarView extends GlobalWidget{
     protected static Center(){
         return Widget.Box({
             spacing: 8,
+            vertical: LayoutManager.isVertical(),
             children: [
                 //BarViewModel.getWorkspaces()
             ],
@@ -25,6 +27,7 @@ export class BarView extends GlobalWidget{
         return Widget.Box({
             hpack: "end",
             spacing: 8,
+            vertical: LayoutManager.isVertical(),
             children: [
                 BarViewModel.getSystemTray(),
                 BarViewModel.getClock()
@@ -40,6 +43,7 @@ export class BarView extends GlobalWidget{
             margins: LayoutManager.getBarMargins(), //[20, 20, 0, 20],
             exclusivity: "exclusive",
             child: Widget.CenterBox({
+                vertical: LayoutManager.isVertical(),
                 class_name: BarViewModel.getBarStyleClass(),
                 start_widget: BarView.Left(),
                 center_widget: BarView.Center(),

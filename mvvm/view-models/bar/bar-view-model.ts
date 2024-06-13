@@ -50,9 +50,10 @@ export class BarViewModel{
                 })),
 
                 // remove this setup hook if you want fixed number of buttons
-                setup: self => self.hook(model.hyprlandService, () => self.children.forEach(btn => {
-                    btn.visible = model.hyprlandService.workspaces.some(ws => ws.id === btn.attribute);
-                })),
+                setup: self => self.hook(model.hyprlandService,
+                    () => self.children.forEach(btn => {
+                        btn.visible = model.hyprlandService.workspaces.some(ws => ws.id === btn.attribute);
+                    })),
             }),
         })
     }
