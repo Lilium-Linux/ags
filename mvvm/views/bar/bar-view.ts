@@ -42,7 +42,7 @@ export class BarView extends GlobalWidget{
             anchor: LayoutManager.getAnchor(),
             margins: LayoutManager.getBarMargins(), //[20, 20, 0, 20],
             exclusivity: "exclusive",
-            child: Widget.CenterBox({
+            child: Widget.Box({
                 vertical: LayoutManager.isVertical(),
                 class_name: BarViewModel.getBarStyleClass(),
                 start_widget: BarView.Left(),
