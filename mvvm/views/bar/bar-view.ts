@@ -25,6 +25,8 @@ export class BarView extends GlobalWidget{
     }
     protected static Right(){
         return Widget.Box({
+            hpack: LayoutManager.isVertical() ? "center" : "end",
+            vpack: LayoutManager.isVertical() ? "end" : "center",
             spacing: 8,
             vertical: LayoutManager.isVertical(),
             children: [
