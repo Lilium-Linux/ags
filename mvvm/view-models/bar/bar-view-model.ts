@@ -1,5 +1,6 @@
 import * as model from "../../models/bar/bar-model";
 import { AppLauncherController } from "../../controllers/app-launcher/app-launcher-controller";
+import { LayoutManager } from "../../../services/layout-manager/LayoutManager";
 
 export class BarViewModel{
 
@@ -28,6 +29,7 @@ export class BarViewModel{
 
         return Widget.Box({
             class_name: "clock",
+            vertical: LayoutManager.isVertical(),
             children: [
                 dateButton,
                 timeLabel,
@@ -41,6 +43,7 @@ export class BarViewModel{
         return Widget.Box({
             spacing: 10,
             class_name: "workspace-box",
+            vertical: LayoutManager.isVertical(),
             child: Widget.Box({
                 children: Array.from({ length: 10 }, (_, i) => i + 1).map(i => Widget.Button({
                     attribute: i,
@@ -78,6 +81,7 @@ export class BarViewModel{
 
         // Create a box widget to contain the tray items
         return Widget.Box({
+            vertical: LayoutManager.isVertical(),
             spacing: 8,
             children: trayItems,
         });
