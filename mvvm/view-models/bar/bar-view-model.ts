@@ -24,7 +24,9 @@ export class BarViewModel{
         dateButton.bind("label", model.date, "value");
         timeLabel.class_name = "time";
         dateButton.class_name = "date";
+
         dateButton.vpack = "center";
+        dateButton.hpack = "center";
         dateButton.on_clicked = this.spawnCalendar;
 
         return Widget.Box({
