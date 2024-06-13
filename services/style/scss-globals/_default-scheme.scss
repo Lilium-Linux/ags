@@ -1,24 +1,24 @@
 @import "theme";
 
-label{
-  color: $text;
-  font-family: $lato-font;
-}
-
-window{
-  background-color: $global-bg;
-  border-radius: $corner-radius;
-}
-
-window, box, center > * {
-  margin: 0 5px 0 5px;
-}
-
-menu {
-  border-radius: $corner-radius;
-  background-color: $global-bg;
-  padding: 15px;
-}
+//label{
+//  color: $text;
+//  font-family: $lato-font;
+//}
+//
+//window{
+//  background-color: $global-bg;
+//  border-radius: $corner-radius;
+//}
+//
+//window, box, center > * {
+//  margin: 0 5px 0 5px;
+//}
+//
+//menu {
+//  border-radius: $corner-radius;
+//  background-color: $global-bg;
+//  padding: 15px;
+//}
 
 //menuitem {
 //  border-radius: $corner-radius;
