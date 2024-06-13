@@ -31,6 +31,8 @@ export class BarViewModel{
 
         return Widget.Box({
             class_name: "clock",
+            vpack: "center",
+            hpack: "center",
             vertical: LayoutManager.isVertical(),
             children: [
                 dateButton,
