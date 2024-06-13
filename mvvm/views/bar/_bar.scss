@@ -1,10 +1,12 @@
 @import "../../../services/style/scss-globals/theme";
 
 .bar {
+  margin: 5px;
   border-radius: 0;
 }
 
 box.barRounded {
+  margin: 5px;
   border-radius: $corner-radius;
 }
 
