@@ -45,6 +45,7 @@ export class BarViewModel{
             class_name: "workspace-box",
             vertical: LayoutManager.isVertical(),
             child: Widget.Box({
+                vertical: LayoutManager.isVertical(),
                 children: Array.from({ length: 10 }, (_, i) => i + 1).map(i => Widget.Button({
                     attribute: i,
                     vpack: "center",
