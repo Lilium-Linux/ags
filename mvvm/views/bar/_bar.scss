@@ -35,13 +35,11 @@ label.time {
   min-width: 10px;
   border-radius: 50px;
   opacity: 0.3;
-  transition: min-width 0.1s linear, min-height 0.1s linear, background-color 0.1s linear, opacity 0.1s linear;
+  transition: background-color 0.1s ease-in-out, opacity 0.1s linear;
   background-color: $flat-button-default;
 
   &-focused {
     @extend .workspace;
-    min-height: 12px;
-    min-width: 24px;
     opacity: 0.8;
     background-color: $flat-button-active;
   }
