@@ -49,6 +49,7 @@ export class BarViewModel{
                 children: Array.from({ length: 10 }, (_, i) => i + 1).map(i => Widget.Button({
                     attribute: i,
                     vpack: "center",
+                    hpack: "center",
                     class_name: activeWorkspaceId.as(activeId => `${activeId === i ? "workspace-focused" : "workspace"}`),
                     onClicked: () => dispatch(i),
                 })),
