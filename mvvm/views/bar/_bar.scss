@@ -30,6 +30,7 @@ label.time {
 
 //Workspaces
 .workspace {
+  animation: smooth-appear 0.3s ease;
   margin: 3px;
   min-height: 10px;
   min-width: 10px;
@@ -60,4 +61,11 @@ label.time {
 .tray-icon {
   min-width: 40px;
   min-height: 40px;
+}
+
+//Animations
+@keyframes smooth-appear {
+  to{
+    opacity:1;
+  }
 }
